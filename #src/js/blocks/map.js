@@ -151,7 +151,7 @@
 					  "elementType": "geometry",
 					  "stylers": [
 						{
-						  "color": "#dadada"
+						  "color": "#c6fbf7"
 						}
 					  ]
 					},
