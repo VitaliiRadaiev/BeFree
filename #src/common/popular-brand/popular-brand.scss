@@ -1,12 +1,14 @@
 .popular-brand {
-    margin-bottom: 100px;
+    margin-bottom: 119px;
 
     &__body {
     }
 
     &__title {
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 11px;
+
+
     }
 
     &__slider {
@@ -21,19 +23,30 @@
         & .swiper-slide {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, 1fr);
             gap: 20px;
             opacity: 0;
             transition: opacity .6s ease;
+
+            @media (max-width: $md2+px) {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            @media (max-width: $md3+px) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            @media (max-width: $md4+px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
             &.swiper-slide-active {
                 opacity: 1;
             }
 
-            & ._big-widht {
+            & ._big-width {
                 grid-column: span 2;
             }
-
-            & ._big-height {
+ 
+            & ._big-heigth {
                 grid-row: span 2;
             }
         }
@@ -50,6 +63,7 @@
                 margin: 0 4px;
                 height: 6px;
                 min-width: 6px;
+                width: 6px;
                 background: #acacac;
 
                 &.swiper-pagination-bullet-active {
@@ -57,6 +71,7 @@
                     box-shadow: 0px 4px 4px rgba(109, 113, 249, 0.3);
                     height: 12px;
                     min-width: 12px;
+                    width: 12px;
                 }
             }
         }
@@ -73,6 +88,10 @@
         justify-content: center;
         align-items: center;
         z-index: 5;
+        display: none;
+        @media (min-width: 1390px) {
+            display: block;
+        }
         
         & > span {
             display: flex;

@@ -265,6 +265,22 @@ textarea {
 	color: #FFFFFF;
 
 	@media (max-width: $md2+px) {
+		font-size: 40px;
+	}
+	@media (max-width: $md3+px) {
+		font-size: 34px;
+	}
+	@media (max-width: $md4+px) {
+		font-size: 26px;
+	}
+}
+.title-2 {
+	font-weight: 500;
+	font-size: 50px;
+	line-height: 1.18em;
+	color: $textColor;
+
+	@media (max-width: $md2+px) {
 		font-size: 50px;
 	}
 	@media (max-width: $md3+px) {
@@ -273,12 +289,6 @@ textarea {
 	@media (max-width: $md4+px) {
 		font-size: 30px;
 	}
-}
-.title-2 {
-	font-weight: 500;
-	font-size: 50px;
-	line-height: 1.18em;
-	color: $textColor;
 }
 
 .title-3 {

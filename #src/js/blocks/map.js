@@ -243,8 +243,7 @@
 			    title: '',
 			    label: '',
 
-			    // Укажем свою иконку для маркера
-			   // icon: 'img/contact/googlMarker.svg',
+			     icon: 'img/icons/mainLoacal.svg',
 			});
 
 		}

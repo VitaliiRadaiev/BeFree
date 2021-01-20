@@ -10,6 +10,13 @@
         display: flex;
         flex-direction: column;
 
+        @media (max-width: $md2+px) {
+            display: block;
+            z-index: 2;
+
+            
+        }
+
         &:after {
             position: absolute;
             content: '';
@@ -18,12 +25,53 @@
             width: 100%;
             height: 75%;
             background-color: $blue;
+            z-index: 1;
+        }
+
+        & > .promo-header__img {
+            display: none;
+
+            @media (max-width: $md2+px) {
+                display: block;
+                bottom: 243px;
+                right: -314px;
+                width: 978px;
+
+                &:before {
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 150px;
+                    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#6d71f9+0,000000+100&0.65+0,0+100 */
+                    background: -moz-linear-gradient(top,  rgba(109,113,249,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+                    background: -webkit-linear-gradient(top,  rgba(109,113,249,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(to bottom,  rgba(109,113,249,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a66d71f9', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+                }
+            }
+
+            @media (max-width: $md3+px) {
+                bottom: 402px;
+                right: 50%;
+                transform: translateX(50%);
+                width: 900px;
+            }
+
+            @media (max-width: 574px) {
+               bottom: auto;
+               top: 100px;
+               width: 747px;
+            }
         }
 
     }
 
     &__bg-inner {
-                position: absolute;
+        z-index: 2;
+        position: absolute;
         bottom: 0;
         left: 50%;
         width: 7342px;
@@ -33,6 +81,21 @@
         background-color: $blue;
         transform: translateX(-50%);
         border-radius: 50%;
+        box-shadow: 0px 24px 24px rgba(109, 113, 249, 0.25);
+        overflow: hidden;
+
+        & .container {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 100%;
+
+            @media (max-width: $md2+px) {
+                display: none
+            }
+        }
 
         @media (max-width: 1920px) {
             width: 4342px;
@@ -63,11 +126,31 @@
         }
     }
 
+    &__img {
+        position: absolute;
+        bottom: -51px;
+        right: -346px;
+        width: 1225px;
+        z-index: 5;
+        & img {
+            width: 100%;
+        }
+
+        @media (max-width: 1199px) {
+            bottom: 177px;
+            right: -346px;
+            width: 1156px;
+        }
+
+
+    }
+
     &__body {
         padding-top: 100px !important;
         padding-bottom: 80px !important;
         position: relative;
         z-index: 2;
+
 
         @media (max-width: $md2+px) {
             padding-top: 85px !important;
@@ -86,7 +169,7 @@
     &__title {
         margin-bottom: 20px;
         max-width: 17.2em;
-
+        position: relative;
         @media (max-width: $md3+px) {
             text-align: center;
         }
@@ -97,6 +180,7 @@
     }
     
     &__subtitle {
+        position: relative;
         font-weight: normal;
         font-size: 24px;
         line-height: 1.42em;
@@ -463,7 +547,7 @@
 
 .home-map {
     position: relative;
-
+    margin-bottom: 40px;
     &:before {
         z-index: 50;
         position: absolute;
@@ -493,7 +577,7 @@
     }
 
     @media (min-width: 1920px) {
-        margin-top: -3.5%;
+        margin-top: -5.5%;
     }
 
 
