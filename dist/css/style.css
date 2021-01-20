@@ -2045,6 +2045,8 @@ textarea {
 
 .popular-brand {
   margin-bottom: 119px;
+  position: relative;
+  z-index: 4;
 }
 
 .popular-brand__title {
@@ -2779,6 +2781,18 @@ textarea {
 .home-map {
   position: relative;
   margin-bottom: 40px;
+  -webkit-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
+  z-index: 3;
+}
+
+.home-map._hide {
+  margin-bottom: -700px;
+}
+
+.home-map._hide:before {
+  height: 50%;
 }
 
 .home-map:before {
