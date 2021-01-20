@@ -1,0 +1,522 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+// ==== ШРИФТЫ ===========================================================================================
+@import "fonts";
+// ==== // ШРИФТЫ ===========================================================================================
+
+// ==== ПЕРЕМЕННЫЕ ===========================================================================================
+@import "vars"; 
+// ==== // ПЕРЕМЕННЫЕ ===========================================================================================
+
+
+// ==== НОРМАЛАЙЗ ===========================================================================================
+@import "normalize";
+// ==== // НОРМАЛАЙЗ ===========================================================================================
+
+//<МИКСИНЫ>===============================================================================================
+@import "mixins.scss";
+//</МИКСИНЫ>===============================================================================================
+
+//<ICOMOON>===============================================================================================
+//@import "../icomoon/style";
+//</ICOMOON>===============================================================================================
+
+//<FANCYBOX>===============================================================================================
+//@import "plagins/fancybox.scss";
+//<FANCYBOX>===============================================================================================
+
+// ==== ПЛАГИНЫ ===========================================================================================
+@import "plagins/swiper-bundle";
+//@import "plagins/drift-basic";
+// ==== // ПЛАГИНЫ ===========================================================================================
+
+// ==== НАЧАЛЬНЫЕ САТИЛИ ФОРМЫ ===========================================================================================
+//@import "forms";
+// ==== НАЧАЛЬНЫЕ САТИЛИ ФОРМЫ ===========================================================================================
+
+// ==== BORDER ===========================================================================================
+@import "../common/burger/burger";
+// ==== BORDER ===========================================================================================
+
+// ==== POPUP ===========================================================================================
+//@import "common/popup/popup";
+// ==== // POPUP ===========================================================================================
+
+
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+aside,
+nav,
+footer,
+header,
+section {
+	display: block;
+}
+html {
+	font-size: 10px;
+}
+html,
+body {
+	height: 100%;
+	min-width: $minwidth;
+	margin: 0 auto;
+}
+body {
+	line-height: 1;
+	font-family: $mainFontFamily;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	color: $textColor;
+	font-size: 1.4rem;
+
+	opacity: 0;
+	transition: opacity .8s ease;
+
+	&.lock {
+		overflow: hidden;
+	}
+
+	&.is-load {
+		opacity: 1;
+	}
+
+}
+
+input,
+button,
+textarea {
+	font-family: $mainFontFamily;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+	margin-top: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+
+	&.loaded {
+	}
+}
+
+.page {
+	flex: 1 1 auto;
+}
+
+
+.container {
+	max-width: 1284px;
+	margin: 0 auto;
+	padding: 0 22px;
+
+	@media (max-width: $md4+px) {
+		padding: 0 17px;
+	}
+}
+
+.ibg {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+
+.logo {
+	max-width: 190px;
+	width: 100%;
+	position: relative;
+
+	&__colour {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__white {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		opacity: 0;
+	}
+
+	& img {
+		width: 100%;
+	}
+}
+
+.plus {
+	display: inline-block;
+	position: relative;
+	font-size: 10px;
+	height: 1.4em;
+	min-width: 1.4em;
+
+	&:before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 100%;
+		width: 2px;
+		border-radius: 25%;
+		background-color: $turquoise;
+		transition: all .2s ease;
+	}
+
+	&:after {
+		position: absolute;
+		content: '';
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		height: 2px;
+		width: 100%;
+		border-radius: 25%;
+		background-color: $turquoise;
+	}
+}
+
+
+// === title ========================================================================
+.title-1 {
+	font-weight: 500;
+	font-size: 70px;
+	line-height: 1.143em;
+	color: #FFFFFF;
+
+	@media (max-width: $md2+px) {
+		font-size: 50px;
+	}
+	@media (max-width: $md3+px) {
+		font-size: 40px;
+	}
+	@media (max-width: $md4+px) {
+		font-size: 30px;
+	}
+}
+.title-2 {
+	font-weight: 500;
+	font-size: 50px;
+	line-height: 1.18em;
+	color: $textColor;
+}
+
+.title-3 {
+
+}
+
+.title-4 {
+
+}
+
+.title-5 {
+
+
+}
+.title-6 {
+
+
+}
+
+.suptitle {
+
+}
+.subtitle {
+
+}
+
+.text {
+
+}
+// === and title ========================================================================
+
+
+
+// === btn ========================================================================
+.btn {
+	&.btn-outline-primary {
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 1.1666em;
+		color: $textColor;
+		min-width: 116px;
+		min-height: 40px;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 10px;
+		border: 2px solid $blue;
+		border-radius: 20px;
+		transition:  all .2s ease;
+
+		@media (max-width: $md3+px) {
+			height: 36px;
+		}
+
+		@media (max-width: $md4+px) {
+			font-size: 14px;
+		}
+
+		@media (min-width: 992px) {
+			&:hover {
+				background-color: $blue;
+				color: #fff;
+			}
+		}
+	}
+
+	&.btn-green {
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 1.1em;
+		text-transform: uppercase;
+		color: $blue;
+		min-width: 12.9em;
+		min-height: 60px;
+		background: linear-gradient(180deg, #5CDEDA 0%, #62c0ff 100%);
+		border-radius: 30px !important;
+		padding: 4px;
+		transition: all .2s ease;
+		overflow: hidden;
+
+		@media (max-width: $md3+px) {
+			min-height: 50px;
+		}
+
+		@media (max-width: $md4+px) {
+			font-size: 14px;
+		}
+
+		& > span {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: linear-gradient(180deg, #5CDEDA 0%, #2FFF6A 100%);
+			border-radius: 30px !important;
+			height: 100%;
+			width: 100%;
+			transition: all .2s ease;
+			
+
+			&:before {
+				position: absolute;
+				content: '';
+				top: 0;
+				left: -60px;
+				width: 50px;
+				height: 100%;
+				transition: all .5s ease;
+				background-color: rgba(#fff, 0.4);
+				transform: skew(15deg);
+			}
+		}
+
+		@media (min-width: 992px) {
+			&:hover {
+				& > span {
+					&:before {
+						left: 120%;
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+button.btn-default {
+	
+}
+
+// === and btn ========================================================================
+
+.input {
+
+}
+
+.textarea {
+
+}
+
+.link {
+
+}
+
+
+// === TEXT CONTETN BLOCK ========================================================================
+.text-content {
+	& h1 {}
+	& h2 {
+
+	}
+	& h3 {}
+	& h4 {}
+
+	& h5 {
+
+	}
+	& h6 {}
+
+	& p {
+
+	}
+
+	& ul {
+
+	}
+
+	& ol {}
+
+	& figure {}
+
+}
+// === and TEXT CONTETN BLOCK ========================================================================
+
+
+// === SOCIAL ========================================================================
+.social {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+
+	&__link {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		background: linear-gradient(104.98deg, #6266E0 0%, #7579FF 100%);
+		box-shadow: -12px -12px 24px #7D82FF, 12px 12px 24px #5D60D4;
+		height: 50px;
+		min-width: 50px;
+		border-radius: 50%;
+		transition: all .6s ease;
+
+		@media (min-width: 992px) {
+			&:hover {
+				box-shadow: -12px -12px 34px #ffffff, 12px 12px 24px #ffffff;
+			}
+		}
+
+		& > span {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-width: 24px;
+			height: 24px;
+			& img {
+				max-width: 100%;
+				max-height: 100%;
+				object-fit: contain;
+				height: auto;
+				width: auto;
+				position: static;
+			}
+		}
+	}
+}
+
+// === and SOCIAL ========================================================================
+
+
+// ==== BLOCKS =====================================================
+@import "../common/header/#header";
+@import "../common/footer/#footer";
+@import "../common/popular-brand/popular-brand";
+// ==== BLOCKS =====================================================
+
+
+// ==== PAGES =====================================================
+
+	// ==== HOME =====================================================
+	@import "pages/#home";
+	// ==== AND HOME =====================================================
+	
+// ==== AND PAGES =====================================================
+
+
