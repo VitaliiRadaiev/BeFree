@@ -1061,6 +1061,138 @@ if(priceSlider) {
 }
 ;
 	
+//RATING
+$('.rating.edit .star').hover(function () {
+    var block = $(this).parents('.rating');
+    block.find('.rating__activeline').css({ width: '0%' });
+    var ind = $(this).index() + 1;
+    var linew = ind / block.find('.star').length * 100;
+    setrating(block, linew);
+}, function () {
+    var block = $(this).parents('.rating');
+    block.find('.star').removeClass('active');
+    var ind = block.find('input').val();
+    var linew = ind / block.find('.star').length * 100;
+    setrating(block, linew);
+});
+$('.rating.edit .star').click(function (event) {
+    var block = $(this).parents('.rating');
+    var re = $(this).index() + 1;
+    block.find('input').val(re);
+    var linew = re / block.find('.star').length * 100;
+    setrating(block, linew);
+});
+$.each($('.rating'), function (index, val) {
+    var ind = $(this).find('input').val();
+    var linew = ind / $(this).parent().find('.star').length * 100;
+    setrating($(this), linew);
+});
+function setrating(th, val) {
+    th.find('.rating__activeline').css({ width: val + '%' });
+};
+	// {
+//     let pagination = document.querySelector('.pagging');
+//     if(pagination) {
+//         let remeberItem;
+//         pagination.addEventListener('mouseenter', () => {
+//             let items = pagination.querySelectorAll('.page-link');
+//             items.forEach(item => {
+//                 if(item.classList.contains('active')) {
+//                     remeberItem = item;
+//                     item.classList.remove('active');
+//                 }
+//             })
+//         })
+
+//         pagination.addEventListener('mouseleave', () => {
+//             if(remeberItem) {
+//                 remeberItem.classList.add('active');
+//             }
+//         })
+//     }
+// };
+	{
+    let headBottomBtn = document.querySelector('.category-header__bottom-btn');
+    if(headBottomBtn) {
+        headBottomBtn.addEventListener('click', () => {
+            let headerSort = document.querySelector('.category-header .header-sort');
+            headBottomBtn.classList.toggle('_active');
+            _slideToggle(headerSort, 600);
+        })
+    }
+
+    let prductsFilter = document.querySelector('.products-filter');
+    if(prductsFilter) {
+        let remeberItem;
+        prductsFilter.addEventListener('mouseenter', () => {
+            let items = prductsFilter.querySelectorAll('.products-filter__list-item');
+            items.forEach(item => {
+                if(item.classList.contains('active')) {
+                    remeberItem = item;
+                    item.classList.remove('active');
+                }
+            })
+        })
+
+        prductsFilter.addEventListener('mouseleave', () => {
+            if(remeberItem) {
+                remeberItem.classList.add('active');
+            }
+        })
+
+        prductsFilter.addEventListener('click', () => {
+            if(document.documentElement.clientWidth < 1024) {
+                prductsFilter.classList.toggle('active');
+                let list = prductsFilter.querySelector('.products-filter__list');
+                _slideToggle(list, 600);
+            }
+        })
+
+        document.body.addEventListener('click', (e) => {
+            if(document.documentElement.clientWidth < 1024) {
+                if(!e.target.closest('.products-filter')) {
+                    let list = prductsFilter.querySelector('.products-filter__list');
+                    _slideUp(list, 600);
+                }
+            }
+        })
+    }
+}
+
+{
+    let textBlock = document.querySelector('.category-page-text');
+    if(textBlock) {
+        if(document.documentElement.clientWidth < 992) {
+            let arr = [...textBlock.querySelectorAll('p')];
+            arr = arr.slice(2, arr.length);
+            let div = document.createElement('div');
+            div.className = '_toggleWrap';
+            div.append(...arr);
+
+            let container = textBlock.querySelector('.container')
+            container.append(div);
+
+            let btn = document.createElement('div');
+            btn.className = "_toggleBtn";
+            btn.innerText = 'Показать ещё';
+
+            container.append(btn);
+            
+            btn.addEventListener('click', function() {
+                _slideToggle(this.previousElementSibling);
+                this.classList.toggle('_active');
+
+                if(this.classList.contains('_active')) {
+                    this.innerText = "Скрыть";
+                } else {
+                    this.innerText = "Показать ещё";
+                }
+            })
+            
+        }
+    }
+};
+	
 });
 
 //// html example --- <img class="lazy" data-src="https://images.unsplash.com/photo-1606851091851-e8c8c0fca5ba?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" src="img/photo/placeholder.jpg" alt="img">

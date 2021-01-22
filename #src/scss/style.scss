@@ -25,7 +25,7 @@
 //</МИКСИНЫ>===============================================================================================
 
 //<ICOMOON>===============================================================================================
-//@import "../icomoon/style";
+@import "../icomoon/style";
 //</ICOMOON>===============================================================================================
 
 //<FANCYBOX>===============================================================================================
@@ -38,7 +38,7 @@
 // ==== // ПЛАГИНЫ ===========================================================================================
 
 // ==== НАЧАЛЬНЫЕ САТИЛИ ФОРМЫ ===========================================================================================
-//@import "forms";
+@import "forms";
 // ==== НАЧАЛЬНЫЕ САТИЛИ ФОРМЫ ===========================================================================================
 
 // ==== BORDER ===========================================================================================
@@ -95,7 +95,7 @@ body {
 	-webkit-text-size-adjust: 100%;
 	color: $textColor;
 	font-size: 1.4rem;
-
+	background-color:  #e5e5e57a;
 	opacity: 0;
 	transition: opacity .8s ease;
 
@@ -256,7 +256,44 @@ textarea {
 	}
 }
 
+.header-bottom-btn {
+	height: 90px;
+	width: 90px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $blue;
+	border-radius: 50%;
+	cursor: pointer;
 
+	@media (min-width: 992px) {
+		&:hover {
+			& > span {
+				box-shadow: 0px 12px 12px #8386e0;
+			}
+		}
+	}
+	
+	& > span {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-width: 60px;
+		height: 60px;
+		background: #6D71F9;
+		box-shadow: 0px 12px 12px #5D60D4;
+		border-radius: 50%;
+		transition: all .2s ease;
+		& img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+			height: auto;
+			width: auto;
+			position: static;
+		}
+	}
+}
 // === title ========================================================================
 .title-1 {
 	font-weight: 500;
@@ -324,6 +361,10 @@ textarea {
 
 // === btn ========================================================================
 .btn {
+	&.width-100 {
+		width: 100%;
+	}
+
 	&.btn-outline-primary {
 		font-weight: normal;
 		font-size: 18px;
@@ -444,12 +485,35 @@ button.btn-default {
 	& h4 {}
 
 	& h5 {
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 1.416em;
+		color: $textColor;
+		margin-bottom: 0.9333em;
 
+		@media (max-width: $md2+px) {
+			font-size: 22px;
+		}
+		@media (max-width: $md3+px) {
+			font-size: 20px;
+		}
+		@media (max-width: $md4+px) {
+			font-size: 18px;
+		}
 	}
 	& h6 {}
 
 	& p {
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 1.555em;
+		color: $textColor;
+		letter-spacing: -0.006em;
+		margin-bottom: 0.7em;
 
+		@media (max-width: $md3+px) {
+			font-size: 14px;
+		}
 	}
 
 	& ul {
@@ -518,6 +582,8 @@ button.btn-default {
 @import "../common/header/#header";
 @import "../common/footer/#footer";
 @import "../common/popular-brand/popular-brand";
+@import "../common/rating/rating";
+@import "../common/pagination/pagging";
 // ==== BLOCKS =====================================================
 
 
@@ -526,6 +592,10 @@ button.btn-default {
 	// ==== HOME =====================================================
 	@import "pages/#home";
 	// ==== AND HOME =====================================================
+	
+	// ==== CATEGORY-PAGE =====================================================
+	@import "pages/#category-page";
+	// ==== AND CATEGORY-PAGE =====================================================
 	
 // ==== AND PAGES =====================================================
 

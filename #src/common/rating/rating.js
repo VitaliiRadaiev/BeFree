@@ -1,3 +1,4 @@
+
 //RATING
 $('.rating.edit .star').hover(function () {
     var block = $(this).parents('.rating');

@@ -48,6 +48,9 @@ $(document).ready(function () {
 	@@include('../common/burger/burger.js');
 	@@include('../common/header/header.js');
 	@@include('../common/popular-brand/popular-brand.js');
+	@@include('../common/rating/rating.js');
+	@@include('../common/pagination/pagging.js');
+	@@include('pages/#category-page.js');
 	
 });
 

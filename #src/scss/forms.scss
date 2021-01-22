@@ -31,95 +31,95 @@
 // //</BUTTONS>====================================================================================================
 
 //<SELECT (sel+tab)>====================================================================================================
-.select {
-	position: relative;
-	// .select__item
-	&__item {
-		position: relative;
-		//font-family: $mainFontFamily;
-		min-width: 294px;
-	}
-	// .select__title
-	&__title {
-		color: $textColor;
-		background-color: #fff;
-		cursor: pointer;
-		@media (max-width: $md2+px) {
-			font-size: 18px;
-		}
-	}
-	// .select__value
-	&__value {
-		display: flex;
-		font-size: 14px;
-		line-height: 170%;
-		padding: 0px 15px;
-		align-items: center;
-		justify-content: space-between;
-		flex-direction: row-reverse;
-		span {
-			//font-family: $mainFontFamily;
-			display: -webkit-box;
-			-webkit-line-clamp: 1;
-			-webkit-box-orient: vertical;
-		}
-		&:before {
-			content: "+";
-			display: inline-block;
-			transition: all 0.3s ease 0s;
-/*			width: 11px;
-			height: 7px;*/
-			//background: url("../img/icons/select.svg") center / 100% no-repeat;
-		}
-	}
-	&__input {
-		width: 100%;
-		background-color: transparent;
-		height: 100%;
-	}
-	// .select__options
-	&__options {
-		color: #000;
-		display: none;
-		position: absolute;
-		top: 29px;
-		border-radius: 0 0 4px 4px;
-		min-width: 100%;
-		left: 0;
-		background-color: #fff;
-		border-top: 0;
-		border-top: 0;
-		font-size: 14px;
-		line-height: 170%;
-		padding: 10px 0px 5px 0px;
-		color: $textColor;
-		box-shadow: 0px 0px 10px rgba(236, 157, 171, 0.3);
-		max-height: 315px;
-		overflow-y: auto;
-	}
-	// .select__option
-	&__option {
-		cursor: pointer;
-		padding: 5px 15px;
-		margin: 0px 0px 0px 0px;
-		@media (min-width: 992px) {
-			&:hover {
-				background: rgba($mainColor, 0.3);
-			}
-		}
-	}
-	&._active {
-		z-index: 5;
-		.select__value {
-			&:before {
-				transform: rotate(-180deg);
-			}
-		}
-		.select__options {
-			display: block;
-		}
-	}
-}
+// .select {
+// 	position: relative;
+// 	// .select__item
+// 	&__item {
+// 		position: relative;
+// 		//font-family: $mainFontFamily;
+// 		min-width: 294px;
+// 	}
+// 	// .select__title
+// 	&__title {
+// 		color: $textColor;
+// 		background-color: #fff;
+// 		cursor: pointer;
+// 		@media (max-width: $md2+px) {
+// 			font-size: 18px;
+// 		}
+// 	}
+// 	// .select__value
+// 	&__value {
+// 		display: flex;
+// 		font-size: 14px;
+// 		line-height: 170%;
+// 		padding: 0px 15px;
+// 		align-items: center;
+// 		justify-content: space-between;
+// 		flex-direction: row-reverse;
+// 		span {
+// 			//font-family: $mainFontFamily;
+// 			display: -webkit-box;
+// 			-webkit-line-clamp: 1;
+// 			-webkit-box-orient: vertical;
+// 		}
+// 		&:before {
+// 			content: "+";
+// 			display: inline-block;
+// 			transition: all 0.3s ease 0s;
+// /*			width: 11px;
+// 			height: 7px;*/
+// 			//background: url("../img/icons/select.svg") center / 100% no-repeat;
+// 		}
+// 	}
+// 	&__input {
+// 		width: 100%;
+// 		background-color: transparent;
+// 		height: 100%;
+// 	}
+// 	// .select__options
+// 	&__options {
+// 		color: #000;
+// 		display: none;
+// 		position: absolute;
+// 		top: 29px;
+// 		border-radius: 0 0 4px 4px;
+// 		min-width: 100%;
+// 		left: 0;
+// 		background-color: #fff;
+// 		border-top: 0;
+// 		border-top: 0;
+// 		font-size: 14px;
+// 		line-height: 170%;
+// 		padding: 10px 0px 5px 0px;
+// 		color: $textColor;
+// 		box-shadow: 0px 0px 10px rgba(236, 157, 171, 0.3);
+// 		max-height: 315px;
+// 		overflow-y: auto;
+// 	}
+// 	// .select__option
+// 	&__option {
+// 		cursor: pointer;
+// 		padding: 5px 15px;
+// 		margin: 0px 0px 0px 0px;
+// 		@media (min-width: 992px) {
+// 			&:hover {
+// 				background: rgba(#000, 0.3);
+// 			}
+// 		}
+// 	}
+// 	&._active {
+// 		z-index: 5;
+// 		.select__value {
+// 			&:before {
+// 				transform: rotate(-180deg);
+// 			}
+// 		}
+// 		.select__options {
+// 			display: block;
+// 		}
+// 	}
+// }
 //</SELECT>====================================================================================================
 
 // //<INPUT (inp+tab)>====================================================================================================
@@ -149,16 +149,20 @@
 
 //<RADIO>====================================================================================================
 .radio-wrap {
-
+	margin-bottom: 14px;
 
     &__radio {
         display: none;
 
         &:checked {
             & + .radio-wrap__label {
-                &:after {
-                    transform: translateY(-50%) scale(1);
-                }
+                &:before {
+					background-color: #2FFF6A;
+					background-image: url('../img/icons/check-blue.svg');
+					background-size: 80%;
+					background-repeat: no-repeat;
+					background-position: center;
+				}
             }
         }
     }
@@ -166,19 +170,13 @@
     &__label {
         display: flex;
         align-items: center;
-        //font-family: $seconFontFamily;
-        font-weight: bold;
         font-size: 18px;
-        line-height: 120%;
+		line-height: 1.1666em;
         text-transform: capitalize;
-        color: rgba(#000, 0.5);
+        color: #fff;
         position: relative;
-        padding-left: 30px;
+        padding-left: 34px;
         cursor: pointer;
-
-        &.visamaster {
-            color: #000;
-        }
 
         & > span {
             min-width: 50px;
@@ -195,32 +193,21 @@
             top: 50%;
             left: 0;
             transform: translateY(-50%);
-            height: 15px;
-            width: 15px;
-            border-radius: 50%;
-            border: 1px solid #000;
+            height: 24px;
+			width: 24px;
+			background: rgba(#fff, 0.1);
+			box-shadow: -12px -12px 24px #7D82FF, 12px 12px 24px #5D60D4;
+			border-radius: 4px;
+			transition: all .2s ease;
         }
 
-        &:after {
-            position: absolute;
-            content: '';
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%) scale(0);
-            transition: all .2s ease;
-            height: 9px;
-            width: 9px;
-            border-radius: 50%;
-            background: red;
-            left: 3px;
-            
-        }
     }
 }
 //</RADIO>====================================================================================================
 
 // //<CHECK (chk+tab)>====================================================================================================
 .checkbox-wrap {
+	margin-bottom: 14px;
     & .checkbox {
         display: none;
 
@@ -228,36 +215,49 @@
 
             & + .checkbox-wrap__label {
                 &:before {
-                    background-image: url(../img/icons/check.svg);
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    background-position: center;
+					background-color: #2FFF6A;
+					background-image: url('../img/icons/check-blue.svg');
+					background-size: 80%;
+					background-repeat: no-repeat;
+					background-position: center;
                 }
             }
         }
     }
 
     &__label {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 170%;
-        color: #000;
-        position: relative;
-        cursor: pointer;
         display: flex;
+        align-items: center;
+        font-size: 18px;
+		line-height: 1.1666em;
+        text-transform: capitalize;
+        color: #fff;
+        position: relative;
+        padding-left: 34px;
+        cursor: pointer;
 
+        & > span {
+            min-width: 50px;
+            margin-right: 15px;
 
+            & img {
+                width: 100%;
+            }
+        }
 
         &:before {
-            margin-top: 3.5px;
-            margin-right: 15px;
+            position: absolute;
             content: '';
-            height: 14px;
-            min-width: 14px;
-            background-color: #F8F8FA;
-            border: 1px solid rgba(17, 17, 17, 0.1);
-        }   
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            height: 24px;
+			width: 24px;
+			background: rgba(#fff, 0.1);
+			box-shadow: -12px -12px 24px #7D82FF, 12px 12px 24px #5D60D4;
+			border-radius: 4px;
+			transition: all .2s ease;
+        } 
     }
 }
 // //</CHECK>====================================================================================================
@@ -377,166 +377,166 @@
 // //</RATING>====================================================================================================
 
 //<QUANTITY>====================================================================================================
-.quantity {
-	width: 109px;
-	height: 40px;
-	display: flex;
-    background: #F8F8FA;
-	// .quantity__button
-	&__button {
-		flex: 0 0 30px;
-		position: relative;
-		cursor: pointer;
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transition: all 0.3s ease 0s;
-			margin: 0px 0px 0px -4.5px;
-			background-color: #a6a6a6;
-			width: 9px;
-			height: 1px;
-		}
-		@media (min-width: $md2+px) {
-			&:hover {
-				&::before,
-				&::after {
-					background-color: rgba(0, 0, 0, 0.5);
-				}
-			}
-		}
-		// .quantity__button_plus
-		&_plus {
-			&::before {
-				transform: rotate(-90deg);
-			}
-		}
-		// .quantity__button_minus
-		&_minus {
-		}
-	}
-	// .quantity__input
-	&__input {
-		flex: 1 1 auto;
-		input {
-            background: #F8F8FA;
-			height: 100%;
-			color: $textColor;
-			font-size: 14px;
-			width: 100%;
-			text-align: center;
-		}
-	}
-}
+// .quantity {
+// 	width: 109px;
+// 	height: 40px;
+// 	display: flex;
+//     background: #F8F8FA;
+// 	// .quantity__button
+// 	&__button {
+// 		flex: 0 0 30px;
+// 		position: relative;
+// 		cursor: pointer;
+// 		&::before,
+// 		&::after {
+// 			content: "";
+// 			position: absolute;
+// 			top: 50%;
+// 			left: 50%;
+// 			transition: all 0.3s ease 0s;
+// 			margin: 0px 0px 0px -4.5px;
+// 			background-color: #a6a6a6;
+// 			width: 9px;
+// 			height: 1px;
+// 		}
+// 		@media (min-width: $md2+px) {
+// 			&:hover {
+// 				&::before,
+// 				&::after {
+// 					background-color: rgba(0, 0, 0, 0.5);
+// 				}
+// 			}
+// 		}
+// 		// .quantity__button_plus
+// 		&_plus {
+// 			&::before {
+// 				transform: rotate(-90deg);
+// 			}
+// 		}
+// 		// .quantity__button_minus
+// 		&_minus {
+// 		}
+// 	}
+// 	// .quantity__input
+// 	&__input {
+// 		flex: 1 1 auto;
+// 		input {
+//             background: #F8F8FA;
+// 			height: 100%;
+// 			color: $textColor;
+// 			font-size: 14px;
+// 			width: 100%;
+// 			text-align: center;
+// 		}
+// 	}
+// }
 //</QUANTITY>====================================================================================================
 
 //<PRICE FILTER>====================================================================================================
-.price-filter {
-	padding-top: 22px;
-	&__slider {
-		height: 2px;
+// .price-filter {
+// 	padding-top: 22px;
+// 	&__slider {
+// 		height: 2px;
 		
-		margin-bottom: 30px;
+// 		margin-bottom: 30px;
 
-		@media (max-width: $md2+px ) {
-			width: 96%;
-			margin: 0 auto 30px;
-		}
-	}
+// 		@media (max-width: $md2+px ) {
+// 			width: 96%;
+// 			margin: 0 auto 30px;
+// 		}
+// 	}
 
-	&__values {
-		margin-bottom: 38px;
-	}
+// 	&__values {
+// 		margin-bottom: 38px;
+// 	}
 
-	&__btn-wrap {}
-	&__btn {
-		cursor: pointer;
-		width: 100%;
-		min-height: 50px;
-		background-color: rgba(255, 255, 255, 0.278);
-		border:2px solid #000;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: #000000;
-		font-size: 16px;
-		font-weight: 400;
-		text-transform: uppercase;
-		letter-spacing: 1.6px;
-		transition: all .2s ease;
+// 	&__btn-wrap {}
+// 	&__btn {
+// 		cursor: pointer;
+// 		width: 100%;
+// 		min-height: 50px;
+// 		background-color: rgba(255, 255, 255, 0.278);
+// 		border:2px solid #000;
+// 		display: flex;
+// 		justify-content: center;
+// 		align-items: center;
+// 		color: #000000;
+// 		font-size: 16px;
+// 		font-weight: 400;
+// 		text-transform: uppercase;
+// 		letter-spacing: 1.6px;
+// 		transition: all .2s ease;
 
-		@media (max-width: $md2+px ) {
-			margin: 0 auto;
-		}
-	}
+// 		@media (max-width: $md2+px ) {
+// 			margin: 0 auto;
+// 		}
+// 	}
 
-	& .noUi-base {
-		position: relative;
-		height: 2px;
-		background: rgba($textColor, 0.1);
+// 	& .noUi-base {
+// 		position: relative;
+// 		height: 2px;
+// 		background: rgba($textColor, 0.1);
 
-		& .noUi-tooltip {
-			position: relative;
-			transform: translateY(-20px) translateX(-50%);
-			font-family: $mainFontFamily;
-			font-size: 12px;
-			line-height: 170%;
-			color: $textColor;
-			&:before {
-				content: '$';
-			}
-		}
-	}
+// 		& .noUi-tooltip {
+// 			position: relative;
+// 			transform: translateY(-20px) translateX(-50%);
+// 			font-family: $mainFontFamily;
+// 			font-size: 12px;
+// 			line-height: 170%;
+// 			color: $textColor;
+// 			&:before {
+// 				content: '$';
+// 			}
+// 		}
+// 	}
 
-	& .noUi-origin,
-	  .noUi-connect {
-		will-change: transform;
-		position: absolute;
-		z-index: 1;
-		top: 0;
-		right: 0;
-		transform-origin: 0 0;
-		transform-style: flat;
-		width: 10%;
-		height: 10%;
-		display: flex;
-		justify-content: flex-end;		
-	}
+// 	& .noUi-origin,
+// 	  .noUi-connect {
+// 		will-change: transform;
+// 		position: absolute;
+// 		z-index: 1;
+// 		top: 0;
+// 		right: 0;
+// 		transform-origin: 0 0;
+// 		transform-style: flat;
+// 		width: 10%;
+// 		height: 10%;
+// 		display: flex;
+// 		justify-content: flex-end;		
+// 	}
 
-	& .noUi-connect {
-		background: $mainColor;
-		width: 100%;
-		height: 100%;
-	}
+// 	& .noUi-connect {
+// 		background: #000;
+// 		width: 100%;
+// 		height: 100%;
+// 	}
 
-	& .noUi-handle {
-		width: 16px;
-		height: 16px;
-		background: $mainColor;
-		border-radius: 50%;
-		position: absolute;
-		top: -7px;
-		right: -7px;
-		cursor: pointer;
-		transition: all .2s ease;
+// 	& .noUi-handle {
+// 		width: 16px;
+// 		height: 16px;
+// 		background: #000;
+// 		border-radius: 50%;
+// 		position: absolute;
+// 		top: -7px;
+// 		right: -7px;
+// 		cursor: pointer;
+// 		transition: all .2s ease;
 
-		@media (min-width: 992px ) {
-			&:hover {
-				background: rgba($mainColor, 0.8);
-			}
-		}
-	}
-}
+// 		@media (min-width: 992px ) {
+// 			&:hover {
+// 				background: rgba(#000, 0.8);
+// 			}
+// 		}
+// 	}
+// }
 
-.values-price-filter {
-	margin: 0px;
+// .values-price-filter {
+// 	margin: 0px;
 	
-	& .input {
-		display: none;
-	}
+// 	& .input {
+// 		display: none;
+// 	}
 
-}
+// }
 
 //</PRICE FILTER>====================================================================================================

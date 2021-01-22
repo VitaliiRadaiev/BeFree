@@ -1,22 +1,20 @@
 <!-- @@include(common/pagination/_pagging.html, {}) -->
-<div class="pagging">
-	<a href="" class="pagging__arrow"></a>
-	<ul class="pagging__list">
-		<li>
-			<a href="" class="pagging__item _active">1</a>
-		</li>
-		<li>
-			<a href="" class="pagging__item">2</a>
-		</li>
-		<li>
-			<a href="" class="pagging__item">3</a>
-		</li>
-		<li>
-			<a href="" class="pagging__item">4</a>
-		</li>
-		<li>
-			<a href="" class="pagging__item">5</a>
-		</li>
+<nav class="pagging" aria-label="Page navigation example">
+	<a href="" class="pagging__arrow">
+		<span>
+			<img src="img/icons/left-arrow.svg" alt="">
+		</span>
+	</a>
+	<ul class="pagination">
+	  <li class="page-item"><a class="page-link" href="#">1</a></li>
+	  <li class="page-item"><a class="page-link active" href="#">2</a></li>
+	  <li class="page-item"><a class="page-link" href="#">3</a></li>
+	  <li class="page-item">...</li>
+	  <li class="page-item"><a class="page-link" href="#">62</a></li>
 	</ul>
-	<a href="" class="pagging__arrow"></a>
-</div>
+	<a href="" class="pagging__arrow">
+		<span>
+			<img src="img/icons/right-arrow.svg" alt="">
+		</span>
+	</a>
+  </nav>

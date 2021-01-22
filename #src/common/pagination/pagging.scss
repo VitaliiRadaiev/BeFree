@@ -2,21 +2,87 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px 0 50px;
+    margin-bottom: 30px;
 
     &__arrow {
+        padding: 5px;
+        transition: all .2s ease;
+        cursor: pointer;
         display: inline-flex;
-    }
-
-    &__list {
-        display: flex;
+        justify-content: center;
         align-items: center;
+        z-index: 5;
 
-        & > li {
-            margin: 0 6px;
+        @media (max-width: $md4+px) {
+            display: none;
+        }
+
+        
+        & > span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 40px;
+            height: 40px;
+            & img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                height: auto;
+                width: auto;
+                position: static;
+            }
+        }
+
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: rgba(#000, 0.1);
+            }
         }
     }
 
-    &__item {
+    & .pagination {
+        margin: 0 auto;
+    }
+
+    & .page-item {
+        flex: 0 0 auto;
+        min-width: 40px;
+        text-align: center;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:not(:last-child) {
+            padding-right: 15px;
+        }
+    }
+
+    & .page-link {
+        display: inline-flex;
+        height: 40px;
+        min-width: 40px;
+        border-radius: 50% !important;
+        border: 2px solid transparent;
+        justify-content: center;
+        align-items: center;
+        color: $textColor;
+        font-size: 18px;
+        background: transparent;
+
+        @media (min-width: 992px) {
+            &:hover {
+                border: 2px solid $blue;
+                color: $blue;
+                background-color: transparent;
+            }
+        }
+
+        &.active {
+            border: 2px solid $blue;
+            color: $blue;
+            background-color: transparent;
+        }
     }
 }
