@@ -25,6 +25,7 @@ function map(n) {
 	]
 	var options = {
 		zoom: 10,
+		disableDefaultUI: true,
 		panControl: false,
 		mapTypeControl: false,
 		center: locations[0][0],

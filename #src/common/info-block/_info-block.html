@@ -1,0 +1,103 @@
+<section class="info-block">
+    <div class="container">
+        <div class="info-block__head">
+            <nav class="breadcrumb-wrap" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                  <li class="breadcrumb-item"><a href="#">Каталог</a></li>
+                  <li class="breadcrumb-item"><a href="#">Интернет-магазины</a></li>
+                  <li class="breadcrumb-item"><a href="#">Еда и рестораны</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Dunkin' Donuts</li>
+                </ol>
+            </nav>
+            <h2 class="info-block__title title-2">Dunkin' Donuts</h2>
+        </div>
+        <div class="info-block__body">
+            <div class="info-block__column-1">
+                <div class="info-block__slider slider-info-block style-pagination">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide ibg">
+                                <img src="img/photo/info-slider01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide ibg">
+                                <img src="img/photo/info-slider01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide ibg">
+                                <img src="img/photo/info-slider01.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="slider-info-block__btn slider-info-block__btn_prev">
+                        <span>
+                            <img src="img/icons/left-arrow.svg" alt="arrow">
+                        </span>
+                    </div>
+                    <div class="slider-info-block__btn slider-info-block__btn_next">
+                        <span>
+                            <img src="img/icons/right-arrow.svg" alt="arrow">
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="info-block__column-2">
+                <div class="info-block__row-1">
+                    <ul class="info-block__icon-list">
+                        <li>
+                            <span>
+                                <img src="img/icons/b/03.svg" alt="">
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <img src="img/icons/b/02.svg" alt="">
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <img src="img/icons/b/01.svg" alt="">
+                            </span>
+                        </li>
+                    </ul>
+                    <div class="info-block__num-reviews">
+                        <span>
+                            <img src="img/icons/chat-circle-dots.svg" alt="icon">
+                        </span>
+                        12
+                    </div>
+                    @@include('../rating/_rating.html',{
+                        "parentClass": 'info-block__rating _medium',
+                        "edit": '',
+                        "stars": '4',
+                        "value": {
+                        "is": false,
+                        "val": '5.0',
+                        }
+                    }) 
+                </div>
+                <div class="info-block__row-2 text-content">
+                    <p>
+                        Разнообразный и богатый опыт укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития. С другой стороны рамки и место обучения кадров представляет собой интересный эксперимент проверки новых предложений.
+                    </p>
+                    <a class="read-more" href="#">Читать дальше</a>
+                </div>
+                <div class="info-block__row-3">
+                    <a href="#" class="info-block__link">
+                        <span>
+                            <img src="img/icons/shopping-bag.svg" alt="icons">
+                        </span>
+                        Перейти в магазин
+                    </a>
+                    <a href="#" class="info-block__link">
+                        <span>
+                            <img src="img/icons/percent.svg" alt="icons">
+                        </span>
+                        Партнерская программа
+                    </a>
+                    <a href="#" class="btn btn-outline-primary">Заявить права</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

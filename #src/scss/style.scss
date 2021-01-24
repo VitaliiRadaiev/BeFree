@@ -94,10 +94,18 @@ body {
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	color: $textColor;
-	font-size: 1.4rem;
-	background-color:  #e5e5e57a;
+	font-size: 1.8rem;
+	background-color:  #F5F5F8;
 	opacity: 0;
 	transition: opacity .8s ease;
+
+
+	@media (max-width: $md3+px) {
+		font-size: 1.6rem;
+	}
+	@media (max-width: $md4+px) {
+		font-size: 1.4rem;
+	}
 
 	&.lock {
 		overflow: hidden;
@@ -294,6 +302,35 @@ textarea {
 		}
 	}
 }
+
+.style-pagination {
+	& .swiper-pagination {
+		position: static;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+
+		& .swiper-pagination-bullet  {
+			margin: 0 6px;
+			height: 6px;
+			min-width: 6px;
+			width: 6px;
+			background: #acacac;
+
+			&.swiper-pagination-bullet-active {
+				background: linear-gradient(104.98deg, #6266E0 0%, #7579FF 100%);
+				box-shadow: 0px 4px 4px rgba(109, 113, 249, 0.3);
+				height: 12px;
+				min-width: 12px;
+				width: 12px;
+			}
+		}
+	}
+}
+
+
 // === title ========================================================================
 .title-1 {
 	font-weight: 500;
@@ -341,7 +378,10 @@ textarea {
 
 }
 .title-6 {
-
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 1.555em;
+	color: $textColor;
 
 }
 
@@ -404,15 +444,17 @@ textarea {
 		text-transform: uppercase;
 		color: $blue;
 		min-width: 12.9em;
-		min-height: 60px;
+		height: 60px;
 		background: linear-gradient(180deg, #5CDEDA 0%, #62c0ff 100%);
 		border-radius: 30px !important;
 		padding: 4px;
 		transition: all .2s ease;
 		overflow: hidden;
-
+		align-self: normal;
+		position: relative;
+		
 		@media (max-width: $md3+px) {
-			min-height: 50px;
+			height: 50px;
 		}
 
 		@media (max-width: $md4+px) {
@@ -477,6 +519,19 @@ button.btn-default {
 
 // === TEXT CONTETN BLOCK ========================================================================
 .text-content {
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 1.555em;
+	color: $textColor;
+	letter-spacing: -0.006em;
+
+	@media (max-width: $md3+px) {
+		font-size: 16px;
+	}
+	@media (max-width: $md4+px) {
+		font-size: 14px;
+	}
+
 	& h1 {}
 	& h2 {
 
@@ -501,7 +556,21 @@ button.btn-default {
 			font-size: 18px;
 		}
 	}
-	& h6 {}
+
+	& h6 {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 1.555em;
+		color: $textColor;
+		margin-bottom: 0.6em;
+
+		@media (max-width: $md3+px) {
+			font-size: 16px;
+		}
+		@media (max-width: $md4+px) {
+			font-size: 14px;
+		}
+	}
 
 	& p {
 		font-weight: 300;
@@ -512,6 +581,9 @@ button.btn-default {
 		margin-bottom: 0.7em;
 
 		@media (max-width: $md3+px) {
+			font-size: 16px;
+		}
+		@media (max-width: $md4+px) {
 			font-size: 14px;
 		}
 	}
@@ -584,6 +656,11 @@ button.btn-default {
 @import "../common/popular-brand/popular-brand";
 @import "../common/rating/rating";
 @import "../common/pagination/pagging";
+@import "../common/hero/hero";
+@import "../common/info-block/info-block";
+@import "../common/breadcrumb/breadcrumb";
+@import "../common/tabs-block/tabs-block";
+@import "../common/shares-block/shares-block";
 // ==== BLOCKS =====================================================
 
 
@@ -596,6 +673,10 @@ button.btn-default {
 	// ==== CATEGORY-PAGE =====================================================
 	@import "pages/#category-page";
 	// ==== AND CATEGORY-PAGE =====================================================
+	
+	// ==== STORE-CARD-REVIEWS =====================================================
+	@import "pages/#store-card";
+	// ==== AND STORE-CARD-REVIEWS =====================================================
 	
 // ==== AND PAGES =====================================================
 

@@ -1,0 +1,7 @@
+.store-card {
+    @media (max-width: $md2+px) {
+        & .hero {
+            display: none;
+        }
+    }
+}

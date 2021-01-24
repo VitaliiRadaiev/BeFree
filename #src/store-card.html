@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "New Project"
+})
+
+<body>
+    <!-- == WRAPPER ================== -->
+    <div class="wrapper store-card">
+        <!-- == TOP LINE ================== -->
+        @@include('common/header/_header.html',{})
+        <!-- == // TOP LINE ================== -->
+
+        <!-- == PAGE CONTENT ================== -->
+        <main class="page">
+            @@include('common/hero/_hero.html',{})
+
+            @@include('common/info-block/_info-block.html',{})
+
+            <section class="tabs-block">
+                <div class="container">
+                    <div class="tabs-block__head">
+                        <div class="tabs-block__head-item tabs-block__head-item_location">
+                            <a href="#tab-1" class="tabs-block__head-title ">Локации <span class="plus"></span></a>
+                        </div>
+                        <div class="tabs-block__head-item tabs-block__head-item_shares ">
+                            <a href="#tab-2" class="tabs-block__head-title active">Акции <span class="plus"></span></a>
+                        </div>
+                        <div class="tabs-block__head-item tabs-block__head-item_reviews">
+                            <a href="#tab-3" class="tabs-block__head-title  ">Отзывы (12) <span class="plus"></span></a>
+                        </div>
+                        <div class="tabs-block__head-item _feedback" data-da="tabs-block__content_reviews, first,991.8">
+                            <a href="#tab-4" class="tabs-block__head-title  _feedback-btn"><span>Оставить отзыв</span></a>
+                        </div>
+                    </div>
+
+                    <div id="tab-1" class="tabs-block__content tabs-block__content_map" data-da="tabs-block__head-item_location,last,767.8">
+                        <div id="map"></div>
+                    </div>
+                    <div id="tab-2" class="tabs-block__content active" data-da="tabs-block__head-item_shares,last,767.8">
+                        @@include('common/shares-block/_shares-block.html',{})
+                    </div>
+                    <div id="tab-3" class="tabs-block__content  tabs-block__content_reviews " data-da="tabs-block__head-item_reviews,last,767.8">
+                        <ul class="reviews-list">
+                            <li class="reviews-list__item text-content">
+                                @@include('common/rating/_rating.html',{
+                                "parentClass": 'reviews-list__rating',
+                                "edit": '',
+                                "stars": '5',
+                                "value": {
+                                "is": false,
+                                "val": '5.0',
+                                }
+                                })
+                                <h6 class="reviews-list__title-title-6">
+                                    Отличный магазин!
+                                </h6>
+                                <div class="reviews-list__text">
+                                    Тут не надо слов. Эти конфеты всегда на высоте. Мне нравится их замораживать или
+                                    очень сильно охлаждать. Тогда они Нежно тают во рту. И пусть весь мир подождет.
+                                </div>
+                                <div class="reviews-list__bottm">
+                                    Иван И <span>/</span> 29.12.2020
+                                </div>
+                            </li>
+                            <li class="reviews-list__item text-content">
+                                @@include('common/rating/_rating.html',{
+                                "parentClass": 'reviews-list__rating',
+                                "edit": '',
+                                "stars": '4',
+                                "value": {
+                                "is": false,
+                                "val": '5.0',
+                                }
+                                })
+                                <h6 class="reviews-list__title-title-6">
+
+                                </h6>
+                                <div class="reviews-list__text">
+                                    Очень вкусные конфеты, беспроигрышный вариант чтобы порадовать близких и себя без
+                                    повода ну и для маленького подарка))
+                                </div>
+                                <div class="reviews-list__bottm">
+                                    Екатерина Иванова <span>/</span> 21.12.2020
+                                </div>
+                            </li>
+                            <li class="reviews-list__item text-content">
+                                @@include('common/rating/_rating.html',{
+                                "parentClass": 'reviews-list__rating',
+                                "edit": '',
+                                "stars": '5',
+                                "value": {
+                                "is": false,
+                                "val": '5.0',
+                                }
+                                })
+                                <h6 class="reviews-list__title-title-6">
+                                    Самая быстрая доставка которую я знаю
+                                </h6>
+                                <div class="reviews-list__text">
+                                    Тут не надо слов. Эти конфеты всегда на высоте. Мне нравится их замораживать или
+                                    очень сильно охлаждать. Тогда они Нежно тают во рту. И пусть весь мир подождет.
+                                </div>
+                                <div class="reviews-list__bottm">
+                                    Иван И <span>/</span> 29.12.2020
+                                </div>
+                            </li>
+                            <li class="reviews-list__item text-content">
+                                @@include('common/rating/_rating.html',{
+                                "parentClass": 'reviews-list__rating',
+                                "edit": '',
+                                "stars": '3',
+                                "value": {
+                                "is": false,
+                                "val": '5.0',
+                                }
+                                })
+                                <h6 class="reviews-list__title-title-6">
+                                </h6>
+                                <div class="reviews-list__text">
+                                    Очень вкусные конфеты, беспроигрышный вариант чтобы порадовать близких и себя без
+                                    повода ну и для маленького подарка))
+                                </div>
+                                <div class="reviews-list__bottm">
+                                    Екатерина Иванова <span>/</span> 21.12.2020
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary width-100 read-more-btn">Показать еще</a>
+                        @@include('common/pagination/_pagging.html')
+                    </div>
+                    <div id="tab-4" class="tabs-block__content ">
+                        <form action="#" class="feedback-form" data-da="tabs-block__content_reviews,1,991.8">
+                            <div class="feedback-form__mobile-top">
+                                <div class="feedback-form__arrow-back">
+                                    
+                                        <img src="img/icons/left-arrow.svg" alt="arrow">
+                                    
+                                </div>
+                                Оставить отзыв
+                            </div>
+                            <div class="feedback-form__inner">
+                                <div class="feedback-form__row-1">
+                                    <div class="feedback-form__column-1">
+                                        <div class="feedback-form__item _necessarily">
+                                            <input type="text" class="input" placeholder="Представьтесь">
+                                        </div>
+                                        <div class="feedback-form__item _necessarily">
+                                            <input type="email" class="input" placeholder="Эл.почта">
+                                        </div>
+                                        <div class="feedback-form__item feedback-form__item_rating _necessarily">
+                                            Ваша оценка:
+                                            @@include('common/rating/_rating.html',{
+                                                "parentClass": 'feedback-form__rating _big',
+                                                "edit": 'edit',
+                                                "stars": '1',
+                                                "value": {
+                                                "is": false,
+                                                "val": '5.0',
+                                                }
+                                            })
+                                        </div>
+                                    </div>
+                                    <div class="feedback-form__column-2">
+                                        <div class="feedback-form__item" data-da="feedback-form__column-1,last,991.8">
+                                            <input type="text" class="input" placeholder="Заглавие отзыва">
+                                        </div>
+                                        <div class="feedback-form__item">
+                                            <textarea class="textarea" placeholder="Ваш отзыв"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="feedback-form__row-2">
+                                    <div class="feedback-form__text">
+                                        Чтобы ваш отзыв либо комментарий прошел модерацию и был опубликован, ознакомьтесь, пожалуйста, с <a href="#">нашими правилами</a>.
+                                    </div>
+                                    <div class="feedback-form__cancel">
+                                        Отменить
+                                    </div>
+                                    <button class="btn btn-green"><span>оставить отзыв</span></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+        <!-- == // PAGE CONTENT ================== -->
+        <!-- == FOOTER ================== -->
+        @@include('common/footer/_footer.html',{})
+        <!-- == // FOOTER ================== -->
+    </div>
+    <!-- == // WRAPPER ================== -->
+    @@include('_js.html',{})
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+    defer
+  ></script>
+</body>
+
+</html>

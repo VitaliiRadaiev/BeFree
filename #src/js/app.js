@@ -50,6 +50,9 @@ $(document).ready(function () {
 	@@include('../common/popular-brand/popular-brand.js');
 	@@include('../common/rating/rating.js');
 	@@include('../common/pagination/pagging.js');
+	@@include('../common/info-block/info-block.js');
+	@@include('../common/tabs-block/tabs-block.js');
+	@@include('../common/shares-block/shares-block.js');
 	@@include('pages/#category-page.js');
 	
 });

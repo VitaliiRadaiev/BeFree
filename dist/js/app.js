@@ -1112,6 +1112,278 @@ function setrating(th, val) {
 //     }
 // };
 	{
+    let slider = document.querySelector('.slider-info-block');
+    if(slider) {
+        let dataSlider;
+             dataSlider = new Swiper(slider.querySelector('.swiper-container'), {
+            /*
+            effect: 'fade',
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            */
+
+            slidesPerView: 1,
+            spaceBetween: 10,
+            speed: 600,
+            //touchRatio: 0,
+            //simulateTouch: false,
+            loop: true,
+            //preloadImages: false,
+            //lazy: true,
+            // Dotts
+            pagination: {
+            	el: slider.querySelector('.swiper-pagination'),
+            	clickable: true,
+            },
+            // Arrows
+            navigation: {
+                nextEl: slider.querySelector('.slider-info-block__btn_next'),
+                prevEl: slider.querySelector('.slider-info-block__btn_prev'),
+            },
+            /*
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    autoHeight: true,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                1268: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                },
+            },
+            */
+            // on: {
+            //     lazyImageReady: function () {
+            //         ibg();
+            //     },
+            // }
+            // And if we need scrollbar
+            //scrollbar: {
+            //	el: '.swiper-scrollbar',
+            //},
+        });
+    }
+
+    let infoBlockBody = document.querySelector('.info-block__body');
+    if(infoBlockBody) {
+        if(document.documentElement.clientWidth < 992 && document.documentElement.clientWidth > 767) {
+            let div = document.createElement('div');
+            div.className = 'info-block__column-3';
+
+            let textBLock = infoBlockBody.querySelector('.info-block__row-2');
+            if(textBLock) {
+                div.append(textBLock)
+            }
+
+            infoBlockBody.append(div);
+        }
+    }
+};
+	let menuTable = document.querySelector('.tabs-block__head');
+if(menuTable) {
+    let items = document.querySelectorAll('.tabs-block__head-title')
+     items.forEach((item) => {
+        item.addEventListener('click', function(e) {
+            
+            if(document.documentElement.clientWidth > 767) {
+                e.preventDefault();
+
+                if(document.documentElement.clientWidth > 767 && document.documentElement.clientWidth < 992) {
+                    if(item.classList.contains('_feedback-btn')) {
+                        return
+                    }
+                }
+
+                const id = e.target.getAttribute('href').replace('#','');
+    
+                document.querySelectorAll('.tabs-block__head-title').forEach((child) => {
+                    child.classList.remove('active');
+                });
+    
+                document.querySelectorAll('.tabs-block__content').forEach((child) => {
+                    child.classList.remove('active');
+                });
+    
+                item.classList.add('active');
+                document.getElementById(id).classList.add('active');
+            }
+
+            if(document.documentElement.clientWidth < 768) {
+                e.preventDefault();
+
+                if(!this.classList.contains('_feedback-btn')) {
+                    if(this.nextElementSibling) {
+                        this.classList.toggle('_active');
+                        this.nextElementSibling.classList.toggle('_active');
+                        _slideToggle(this.nextElementSibling, 500);
+        
+                    }
+    
+                    items.forEach(item => {
+                        if(item == this) {
+                            return
+                        }
+                        if(item.nextElementSibling) {
+                            item.classList.remove('_active');
+                            item.nextElementSibling.classList.remove('_active');
+                            _slideUp(item.nextElementSibling, 500);
+    
+                        }
+                    })
+                }
+
+
+            }
+        });
+    });
+
+    let feedBackBtn = document.querySelector('.tabs-block__head-title._feedback-btn');
+    let feedBackBlockBtn = document.querySelector('.tabs-block__head-item._feedback')
+    let feedBackForm = document.querySelector('.feedback-form');
+    if(feedBackBtn) {
+        window.addEventListener('resize', () => {
+            if(document.documentElement.clientWidth < 992) {
+                if(feedBackBtn.classList.contains('active')) {
+                    feedBackBtn.classList.remove('active');
+                    let reviewsTabs = document.querySelector('.tabs-block__head-item_reviews .tabs-block__head-title');
+                    reviewsTabs.classList.add('active');
+                    document.getElementById('tab-3').classList.add('active');
+                }
+            }
+        });
+    
+    
+        feedBackBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if(document.documentElement.clientWidth < 768) {
+                feedBackForm.classList.add('_isFormMobileShow');
+                document.body.classList.add('lock');
+            } else if(document.documentElement.clientWidth < 992) {
+                _slideDown(feedBackForm);
+                setTimeout(() => {
+                     _slideUp(feedBackBlockBtn);
+    
+                }, 600)
+            }
+        })
+    }
+
+
+    let cancelBtn = document.querySelector('.feedback-form__cancel');
+    if(cancelBtn) {
+        cancelBtn.addEventListener('click', () => {
+            if(document.documentElement.clientWidth < 992) {
+                _slideUp(feedBackForm);
+                setTimeout(() => {
+                     _slideDown(feedBackBlockBtn);
+    
+                }, 600)
+            }
+        });
+    }
+
+    let formErrowBack = document.querySelector('.feedback-form__arrow-back');
+    if(formErrowBack) {
+        formErrowBack.addEventListener('click', () => {
+            if(document.documentElement.clientWidth < 768) {
+                feedBackForm.classList.remove('_isFormMobileShow');
+                document.body.classList.remove('lock');
+            }
+        })
+
+    }
+}
+;
+	{
+    let sharesSlider = document.querySelector('.shares-slider');
+    if(sharesSlider) {
+        let dataSlider;
+
+        function mobileSlider() {
+            if(document.documentElement.clientWidth > 991 && sharesSlider.dataset.mobile == 'false') {
+                dataSlider = new Swiper(sharesSlider.querySelector('.swiper-container'), {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                    speed: 600,
+                    //touchRatio: 0,
+                    //simulateTouch: false,
+                    loop: true,
+                    //preloadImages: false,
+                    //lazy: true,
+                    // Dotts
+                    pagination: {
+                        el: sharesSlider.querySelector('.swiper-pagination'),
+                        clickable: true,
+                    },
+                    // Arrows
+                    navigation: {
+                        nextEl: sharesSlider.querySelector('.shares-slider__btn_next'),
+                        prevEl: sharesSlider.querySelector('.shares-slider__btn_prev'),
+                    },
+                    /*
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 0,
+                            autoHeight: true,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        992: {
+                            slidesPerView: 3,
+                            spaceBetween: 20,
+                        },
+                        1268: {
+                            slidesPerView: 4,
+                            spaceBetween: 30,
+                        },
+                    },
+                    */
+                    // on: {
+                    //     lazyImageReady: function () {
+                    //         ibg();
+                    //     },
+                    // }
+                    // And if we need scrollbar
+                    //scrollbar: {
+                    //	el: '.swiper-scrollbar',
+                    //},
+                });
+
+                sharesSlider.dataset.mobile == 'true';
+            }
+
+            if(document.documentElement.clientWidth < 992) {
+				sharesSlider.dataset.mobile = 'false';
+
+				if(sharesSlider.querySelector('.swiper-container').classList.contains('swiper-container-initialized')) {
+					dataSlider.destroy();
+				}
+			}
+        } 
+        
+        mobileSlider();
+
+        window.addEventListener('resize', () => {
+			mobileSlider();
+		})
+
+    }
+};
+	{
     let headBottomBtn = document.querySelector('.category-header__bottom-btn');
     if(headBottomBtn) {
         headBottomBtn.addEventListener('click', () => {
@@ -1164,30 +1436,32 @@ function setrating(th, val) {
     if(textBlock) {
         if(document.documentElement.clientWidth < 992) {
             let arr = [...textBlock.querySelectorAll('p')];
-            arr = arr.slice(2, arr.length);
-            let div = document.createElement('div');
-            div.className = '_toggleWrap';
-            div.append(...arr);
-
-            let container = textBlock.querySelector('.container')
-            container.append(div);
-
-            let btn = document.createElement('div');
-            btn.className = "_toggleBtn";
-            btn.innerText = 'Показать ещё';
-
-            container.append(btn);
-            
-            btn.addEventListener('click', function() {
-                _slideToggle(this.previousElementSibling);
-                this.classList.toggle('_active');
-
-                if(this.classList.contains('_active')) {
-                    this.innerText = "Скрыть";
-                } else {
-                    this.innerText = "Показать ещё";
-                }
-            })
+            if(arr.length > 2) {
+                arr = arr.slice(2, arr.length);
+                let div = document.createElement('div');
+                div.className = '_toggleWrap';
+                div.append(...arr);
+    
+                let container = textBlock.querySelector('.container')
+                container.append(div);
+    
+                let btn = document.createElement('div');
+                btn.className = "_toggleBtn";
+                btn.innerText = 'Показать ещё';
+    
+                container.append(btn);
+                
+                btn.addEventListener('click', function() {
+                    _slideToggle(this.previousElementSibling);
+                    this.classList.toggle('_active');
+    
+                    if(this.classList.contains('_active')) {
+                        this.innerText = "Скрыть";
+                    } else {
+                        this.innerText = "Показать ещё";
+                    }
+                })
+            }
             
         }
     }
@@ -1287,9 +1561,9 @@ document.addEventListener("DOMContentLoaded", function () {
 				// center - определяем точку на которой карта будет центрироваться
 				center: {lat: center.lat, lng: center.lng},
 				// zoom - определяет масштаб. 0 - видно всю платнеу. 18 - видно дома и улицы города.
-
 				zoom: 14,
-
+				scrollwheel: false,
+				disableDefaultUI: true,
 				// Добавляем свои стили для отображения карты
 				styles: [
 					{

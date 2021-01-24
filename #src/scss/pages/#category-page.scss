@@ -154,43 +154,6 @@
 }
 
 
-.breadcrumb {
-    justify-content: center;
-    background-color: transparent;
-    margin-bottom: 1px;
-    margin-top: 0;
-    padding: 0;
-}
-.breadcrumb-item {
-    font-size: 14px;
-    line-height: 1.71em;
-    color: #FFFFFF;
-
-    &+ .breadcrumb-item {
-        &:before {
-            color: #fff !important;
-            content: '-' !important;
-            margin: 0 5px;
-        }
-    }
-
-    &.active {
-        color: #FFFFFF;
-    }
-
-    & > a {
-        color: #FFFFFF;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-}
-
-
-
-
-
 
 
 

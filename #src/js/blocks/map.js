@@ -28,9 +28,9 @@
 				// center - определяем точку на которой карта будет центрироваться
 				center: {lat: center.lat, lng: center.lng},
 				// zoom - определяет масштаб. 0 - видно всю платнеу. 18 - видно дома и улицы города.
-
 				zoom: 14,
-
+				scrollwheel: false,
+				disableDefaultUI: true,
 				// Добавляем свои стили для отображения карты
 				styles: [
 					{
