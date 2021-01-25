@@ -53,7 +53,10 @@ $(document).ready(function () {
 	@@include('../common/info-block/info-block.js');
 	@@include('../common/tabs-block/tabs-block.js');
 	@@include('../common/shares-block/shares-block.js');
+	
+	
 	@@include('pages/#category-page.js');
+	@@include('pages/#cabinet-page.js');
 	
 });
 

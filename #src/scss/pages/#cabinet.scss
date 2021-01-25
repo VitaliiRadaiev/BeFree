@@ -1,0 +1,293 @@
+.cabinet-page {
+
+}
+
+
+.cabinet {
+
+    &__title {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+}
+
+
+.cabinet-tabs {
+    @media (min-width: 768px) {
+        background: linear-gradient(109.5deg, #EEEEF1 6.26%, #FFFFFF 93.74%);
+        box-shadow: -12px -12px 24px #FFFFFF, 12px 12px 24px #E9E9EC;
+        border-radius: 30px;
+        display: flex;
+        padding: 0 20px;
+        margin-bottom: 60px;
+    }    
+
+    &__item {
+        @media (min-width: 768px) {
+            flex: 0 1 33.3333%;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60px;
+            position: relative;
+            font-size: 18px;
+            color: $textColor;
+            transition: all .2s ease;
+
+            @media (min-width: 992px) {
+                &:hover {
+                    color: $blue;
+
+                    &:before {
+                        width: 90%;
+                    }
+                }
+            }
+
+            &.active {
+                color: $blue;
+
+                &:before {
+                    width: 90%;
+                }
+            }
+
+            &:before {
+                position: absolute;
+                content: '';
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 0;
+                height: 2px;
+                background-color: $blue;
+                width: 0%;
+                transition: all .2s ease;
+            }
+
+            & > span {
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+
+.entity-block {
+    display: flex;
+    margin-bottom: 120px;
+
+    @media (max-width: $md3+px) {
+        margin-bottom: 60px;
+    }
+    @media (max-width: $md4+px) {
+        margin-bottom: 40px;
+    }
+
+    &__column-1 {
+        flex: 0 0 295px;
+        margin-right: 125px;
+    }
+
+    &__column-2 {
+        flex: 1 1 auto;
+    }
+}
+
+
+
+.entity-list {
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: -2px;
+        }
+    }
+
+    &__triggers {
+        display: flex;
+        align-items: center;
+        background: transparent;
+        box-shadow:  0px  0px 0px #FFFFFF, 0px 0px 0px #E9E9EC;
+        border-radius: 30px;
+        color: $textColor;
+        min-height: 60px;
+        padding: 10px 20px;
+        font-size: 18px;
+        line-height: 1.2em;
+
+        @media (min-width: 992px) {
+            &:hover {
+                background: $blue;
+                box-shadow: -12px -12px 24px #FFFFFF, 12px 12px 24px #E9E9EC;
+                color: #fff;
+
+                & > span {
+                    & svg {
+                        stroke: #fff;
+                    }
+                }
+            }
+        }
+
+        &.active {
+            background: $blue;
+            box-shadow: -12px -12px 24px #FFFFFF, 12px 12px 24px #E9E9EC;
+            color: #fff;
+
+            & > span {
+                & svg {
+                    stroke: #fff;
+                }
+            }
+        }
+        
+        & > span {
+            flex: 0 0 24px;
+            height: 24px;
+            margin-right: 20px;
+
+            & svg {
+                width: 100%;
+                height: auto;
+                stroke: $gray;
+            }
+        }
+    }
+}
+
+
+.btn-add-entity {
+    display: flex;
+    min-height: 40px;
+    border-radius: 30px;
+    align-items: center;
+    padding: 2px 25px;
+    color: $blue;
+    font-size: 18px;
+    transition: all .2s ease;
+
+    @media (min-width: 992px) {
+        &:hover {
+            background: rgba($blue, 0.1);
+        }
+    }
+
+    & > span {
+        margin-right: 25px;
+        &::before, &::after {
+            background-color: $blue;
+        }
+    }
+}
+
+
+.entity-form {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+
+
+
+.entity-form {
+
+    &__top-label {
+        display: flex;
+        align-items: center;
+        background: rgba($turquoise, 0.1);
+        border-radius: 30px;
+        min-width: 60px;
+        justify-content: space-between;
+        color: $turquoise;
+        font-weight: 500;
+        padding: 15px 30px;
+        margin-bottom: 40px;
+        & > span {
+            flex: 0 0 24px;
+            margin-left: 20px;
+            & img {
+                width: 100%;
+            }
+        }
+    }
+
+    &__photo {
+    }
+
+    &__row {
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__photo-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+
+        & > li {
+            flex: 0 1 25%;
+            padding: 0 10px;
+            margin-bottom: 20px;
+
+            & > span {
+                display: block;
+                position: relative;
+                border-radius: 5px;
+                overflow: hidden;
+                padding-bottom: 60%;
+                
+            }
+        }
+    }
+
+    &__photo-add {
+        height: 100%;
+        & label {
+            display: flex;
+            border: 2px solid $blue;
+            border-radius: 5px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.2em;
+            transition: all .2s ease;
+            cursor: pointer;
+            height: 100%;
+            & .plus {
+                margin-bottom: 10px;
+                &:before, &:after {
+                    background-color: $blue;
+                }
+            }
+
+            @media (min-width: 992px) {
+                &:hover {
+                    background-color: $blue;
+                    color: #fff;
+
+                    & .plus {
+                        &:before, &:after {
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        & input[type='file'] {
+            display: none;
+        }
+        
+    }
+}
