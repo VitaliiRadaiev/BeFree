@@ -1,3 +1,23 @@
+.breadcrumb-wrap {
+    &.gray {
+        .breadcrumb-item {
+            color: $gray;
+            &+ .breadcrumb-item {
+                &:before {
+                    color: $gray !important;
+                }
+            }
+        
+            &.active {
+                color: $gray;
+            }
+        
+            & > a {
+                color: $gray;  
+            }
+        }
+    }
+}
 .breadcrumb {
     justify-content: center;
     background-color: transparent;

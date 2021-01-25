@@ -355,13 +355,13 @@ textarea {
 	color: $textColor;
 
 	@media (max-width: $md2+px) {
-		font-size: 50px;
-	}
-	@media (max-width: $md3+px) {
 		font-size: 40px;
 	}
+	@media (max-width: $md3+px) {
+		font-size: 34px;
+	}
 	@media (max-width: $md4+px) {
-		font-size: 30px;
+		font-size: 26px;
 	}
 }
 
@@ -532,14 +532,99 @@ button.btn-default {
 		font-size: 14px;
 	}
 
-	& h1 {}
+	& h1 {
+		font-weight: 500;
+		font-size: 50px;
+		line-height: 1.18em;
+		color: $textColor;
+		margin-bottom: 0.8em;
+		margin-top: 0;
+	
+		@media (max-width: $md2+px) {
+			font-size: 40px;
+		}
+		@media (max-width: $md3+px) {
+			font-size: 34px;
+		}
+		@media (max-width: $md4+px) {
+			font-size: 26px;
+		}
+	}
+
 	& h2 {
+		font-weight: 500;
+		font-size: 46px;
+		line-height: 1.22em;
+		color: $textColor;
+		margin-bottom: 0.87em;
+
+		@media (max-width: $md2+px) {
+			font-size: 36px;
+		}
+		@media (max-width: $md3+px) {
+			font-size: 30px;
+		}
+		@media (max-width: $md4+px) {
+			font-size: 24px;
+		}
+	}
+
+	& h3 {
+		font-weight: 500;
+		font-size: 40px;
+		line-height: 1.25em;
+		color: $textColor;
+		margin-bottom: 1em;
+
+		@media (max-width: $md2+px) {
+			font-size: 32px;
+		}
+		@media (max-width: $md3+px) {
+			font-size: 26px;
+		}
+		@media (max-width: $md4+px) {
+			font-size: 22px;
+		}
 
 	}
-	& h3 {}
-	& h4 {}
+
+	& h4 {
+		font-weight: 500;
+		font-size: 36px;
+		line-height: 1.25em;
+		color: $textColor;
+		margin-bottom: 1.211em;
+
+		@media (max-width: $md2+px) {
+			font-size: 28px;
+		}
+		@media (max-width: $md3+px) {
+			font-size: 24px;
+		}
+		@media (max-width: $md4+px) {
+			font-size: 20px;
+		}
+	}
 
 	& h5 {
+		font-weight: 500;
+		font-size: 32px;
+		line-height: 1.25em;
+		color: $textColor;
+		margin-bottom: 1.4em;
+
+		@media (max-width: $md2+px) {
+			font-size: 24px;
+		}
+		@media (max-width: $md3+px) {
+			font-size: 22px;
+		}
+		@media (max-width: $md4+px) {
+			font-size: 19px;
+		}
+	}
+
+	& h6 {
 		font-weight: 500;
 		font-size: 24px;
 		line-height: 1.416em;
@@ -557,21 +642,6 @@ button.btn-default {
 		}
 	}
 
-	& h6 {
-		font-weight: 500;
-		font-size: 18px;
-		line-height: 1.555em;
-		color: $textColor;
-		margin-bottom: 0.6em;
-
-		@media (max-width: $md3+px) {
-			font-size: 16px;
-		}
-		@media (max-width: $md4+px) {
-			font-size: 14px;
-		}
-	}
-
 	& p {
 		font-weight: 300;
 		font-size: 18px;
@@ -579,6 +649,18 @@ button.btn-default {
 		color: $textColor;
 		letter-spacing: -0.006em;
 		margin-bottom: 0.7em;
+
+		& > a {
+			color: $blue;
+			transition: all .2s ease;
+
+			@media (min-width: 992px) {
+				&:hover {
+					color: $turquoise;
+				}
+			}
+
+		}
 
 		@media (max-width: $md3+px) {
 			font-size: 16px;
@@ -589,12 +671,80 @@ button.btn-default {
 	}
 
 	& ul {
+		&:not(.social) {
+			& > li {
+				padding-left: 72px;
+				position: relative;
+				margin-bottom: 11px;
+
+				@media (max-width: $md2+px) {
+					padding-left: 30px;
+				}
+	
+				&:before {
+					position: absolute;
+					content: '';
+					top: 7px;
+					left: 40px;
+					background: linear-gradient(104.98deg, #6266E0 0%, #7579FF 100%);
+					box-shadow: 0px 4px 4px rgba(109, 113, 249, 0.3);
+					height: 12px;
+					width: 12px;
+					border-radius: 50%;
+
+					@media (max-width: $md2+px) {
+						left: 0;
+					}
+				}
+			}
+		}
 
 	}
 
-	& ol {}
+	& ol {
+		list-style: none;
+		padding-left: 40px;
 
-	& figure {}
+		@media (max-width: $md2+px) {
+			padding-left: 0;
+		}
+
+		& > li {
+			margin-bottom: 8px;
+			display: flex;
+			& > span {
+				&:first-child {
+					flex: 0 0 auto;
+					display: inline-flex;
+					justify-content: center;
+					align-items: center;
+					color: $blue;
+					height: 30px;
+					width: 30px;
+					border-radius: 50%;
+					border: 2px solid $blue;
+					margin-right: 8px;
+					font-size: 14px;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+
+	& figure {
+		display: block;
+		overflow: hidden;
+		border-radius: 5px;
+		margin-bottom: 50px;
+
+		@media (max-width: $md2+px) {
+			margin-bottom: 30px;
+		}
+
+		& img {
+			width: 100%;
+		}
+	}
 
 }
 // === and TEXT CONTETN BLOCK ========================================================================
@@ -677,6 +827,10 @@ button.btn-default {
 	// ==== STORE-CARD-REVIEWS =====================================================
 	@import "pages/#store-card";
 	// ==== AND STORE-CARD-REVIEWS =====================================================
+	
+	// ==== TEXT PAGE =====================================================
+	@import "pages/#text-page";
+	// ==== AND TEXT PAGE =====================================================
 	
 // ==== AND PAGES =====================================================
 
