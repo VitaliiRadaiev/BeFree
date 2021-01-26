@@ -107,7 +107,7 @@
             <a class="languages__item " href="#">En</a>
             <a class="languages__item active" href="#">ru</a>
         </div>
-        <a href="#" class="btn btn-outline-primary" data-da="menu__inner,first,767.8">Войти</a>
+        <a href="#popupStatement" class="btn btn-outline-primary popup-link" data-da="menu__inner,first,767.8">Войти</a>
         <div class="header__burger">
             <div class="burger-wrap">
                 <div class="burger" data-activEl="menu">
@@ -1259,6 +1259,45 @@
 			<!-- == // FOOTER ================== -->
 		</div>
 		<!-- == // WRAPPER ================== -->
+		<div class="popup" id="popupStatement">
+	<div class="popup_body">
+		<div class="popup_content">
+            <div class="close-popup"><span></span></div>
+			<form action="#" class="popup-form">
+                <div class="popup-form__icon">
+                    <span>
+                        <span>
+                            <img src="img/icons/hand-palm.svg" alt="icons">
+                        </span>
+                    </span>
+                </div>
+                <div class="popup-form__title">
+                    Заявление прав на “Название магазина”
+                </div>
+                <div class="popup-form__item">
+                    <input type="text" id="" class="input _mask" data-mask="7(099)999-99-99" placeholder="Телефон">
+                </div>
+                <div class="popup-form__item">
+                    <input type="password" id="" class="input" placeholder="Пароль">
+                    <div class="form__viewpass"><span></span></div>
+                </div>
+                <div class="popup-form__item popup-form__file">
+                    <input type="file" id="doc" class="input" placeholder="Пароль">
+                    <label class="popup-form__file-label" for="doc">
+                        <span class="plus"></span>
+                        <div class="popup-form__file-label-inner">
+                            <span>Прикрепить документы, </span>
+                            подтверждающие право собственности
+                        </div>
+                    </label>
+                </div>
+                <button class="btn btn-green"><span>Заявить права</span></button>
+            </form>
+			
+		</div>
+	</div>
+</div>
+
 		<script src="js/vendors.js"></script>
 <script src="bootstrap-4.5.3-dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/app.js"></script>

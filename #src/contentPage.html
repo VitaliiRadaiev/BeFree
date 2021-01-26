@@ -4,6 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Content</title>
+    <meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
     <style>
         p,
         h2 {
@@ -62,7 +71,18 @@
         <li><a href="cabinet-profile.html">Cabinet Profile</a></li>
         <li><a href="cabinet-password.html">Cabinet Change Password</a></li>
         <li><a href="text-page.html">Text Page</a></li>
+        <li><a href="page-404.html">Page 404</a></li>
+        <li><a href="#popupStatement" class="popup-link">Popup 1</a></li>
+        <li><a href="#popupSignIn" class="popup-link">Popup 2</a></li>
+        <li><a href="#popupRegister" class="popup-link">Popup 3</a></li>
+        <li><a href="#popupMess" class="popup-link">Popup 4</a></li>
     </ol>
+
+    @@include('_popup-statement.html',{})
+    @@include('_popup-sign-in.html',{})
+    @@include('_popup-register.html',{})
+    @@include('_popup-mess.html',{})
+    @@include('_js.html',{})
 </body>
 
 </html>

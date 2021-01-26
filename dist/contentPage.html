@@ -4,6 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Content</title>
+    <meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
     <style>
         p,
         h2 {
@@ -62,7 +71,152 @@
         <li><a href="cabinet-profile.html">Cabinet Profile</a></li>
         <li><a href="cabinet-password.html">Cabinet Change Password</a></li>
         <li><a href="text-page.html">Text Page</a></li>
+        <li><a href="page-404.html">Page 404</a></li>
+        <li><a href="#popupStatement" class="popup-link">Popup 1</a></li>
+        <li><a href="#popupSignIn" class="popup-link">Popup 2</a></li>
+        <li><a href="#popupRegister" class="popup-link">Popup 3</a></li>
+        <li><a href="#popupMess" class="popup-link">Popup 4</a></li>
     </ol>
+
+    <div class="popup" id="popupStatement">
+	<div class="popup_body">
+		<div class="popup_content">
+            <div class="close-popup"><span></span></div>
+			<form action="#" class="popup-form">
+                <div class="popup-form__icon">
+                    <span>
+                        <span>
+                            <img src="img/icons/hand-palm.svg" alt="icons">
+                        </span>
+                    </span>
+                </div>
+                <div class="popup-form__title">
+                    Заявление прав на “Название магазина”
+                </div>
+                <div class="popup-form__item">
+                    <input type="text" id="" class="input _mask" data-mask="7(099)999-99-99" placeholder="Телефон">
+                </div>
+                <div class="popup-form__item">
+                    <input type="password" id="" class="input" placeholder="Пароль">
+                    <div class="form__viewpass"><span></span></div>
+                </div>
+                <div class="popup-form__item popup-form__file">
+                    <input type="file" id="doc" class="input" placeholder="Пароль">
+                    <label class="popup-form__file-label" for="doc">
+                        <span class="plus"></span>
+                        <div class="popup-form__file-label-inner">
+                            <span>Прикрепить документы, </span>
+                            подтверждающие право собственности
+                        </div>
+                    </label>
+                </div>
+                <button class="btn btn-green"><span>Заявить права</span></button>
+            </form>
+			
+		</div>
+	</div>
+</div>
+
+    <div class="popup" id="popupSignIn">
+	<div class="popup_body">
+		<div class="popup_content">
+            <div class="close-popup"><span></span></div>
+			<form action="#" class="popup-form">
+                <div class="popup-form__icon">
+                    <span>
+                        <span>
+                            <img src="img/icons/user-white.svg" alt="icons">
+                        </span>
+                    </span>
+                </div>
+                <div class="popup-form__title">
+                    Авторизация
+                </div>
+                <div class="popup-form__item">
+                    <input type="text" id="" class="input _mask" data-mask="7(099)999-99-99" placeholder="Телефон">
+                </div>
+                <div class="popup-form__item">
+                    <input type="password" id="" class="input" placeholder="Пароль">
+                    <div class="form__viewpass"><span></span></div>
+                </div>
+                <div class="popup-form__link-wrap">
+                    <a href="#" class="popup-form__link">Забыли пароль?</a>
+                    <a href="#" class="popup-form__link">Еще нет аккаунта?</a>
+                </div>
+                <button class="btn btn-green"><span>Заявить права</span></button>
+            </form>
+			
+		</div>
+	</div>
+</div>
+
+    <div class="popup" id="popupRegister">
+	<div class="popup_body">
+		<div class="popup_content">
+            <div class="close-popup"><span></span></div>
+			<form action="#" class="popup-form">
+                <div class="popup-form__icon">
+                    <span>
+                        <span>
+                            <img src="img/icons/user-plus.svg" alt="icons">
+                        </span>
+                    </span>
+                </div>
+                <div class="popup-form__title">
+                    Регистрация
+                </div>
+                <div class="popup-form__item">
+                    <input type="text" id="" class="input _mask" data-mask="7(099)999-99-99" placeholder="Телефон">
+                </div>
+                <div class="popup-form__item">
+                    <input type="password" id="" class="input" placeholder="Пароль">
+                    <div class="form__viewpass"><span></span></div>
+                </div>
+                <div class="popup-form__item">
+                    <input type="password" id="" class="input" placeholder="Подтвердить пароль">
+                    <div class="form__viewpass"><span></span></div>
+                </div>
+               
+                <button class="btn btn-green"><span>Войти</span></button>
+                <a href="#" class="popup-form__link">Уже есть аккаунт?</a>
+            </form>
+			
+		</div>
+	</div>
+</div>
+
+    <div class="popup open" id="popupMess">
+	<div class="popup_body">
+		<div class="popup_content">
+            <div class="close-popup close-icon"><span></span></div>
+			<form action="#" class="popup-form">
+                <div class="popup-form__icon">
+                    <span>
+                        <span>
+                            <img src="img/icons/circle-check-white.svg" alt="icons">
+                        </span>
+                    </span>
+                </div>
+                <div class="popup-form__title">
+                    Заявление принято
+                    и будет рассмотрено до 
+                    <strong>01.03.2020</strong>
+                </div>
+                <div class="popup-form__text text-content">
+                    После подтверждения ваших прав, юр.лицо будет отображаться в каталоге, и Вы получите доступ к редактированию его данных в личном кабинете
+                </div>
+               
+                <button type="button" class="btn btn-green close-popup"><span>Хорошо</span></button>
+               
+            </form>
+			
+		</div>
+	</div>
+</div>
+
+    <script src="js/vendors.js"></script>
+<script src="bootstrap-4.5.3-dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
 </body>
 
 </html>

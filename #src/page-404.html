@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "New Project"
+})
+
+<body>
+    <!-- == WRAPPER ================== -->
+    <div class="wrapper page-404">
+        <!-- == TOP LINE ================== -->
+        @@include('common/header/_header.html',{})
+        <!-- == // TOP LINE ================== -->
+
+        <!-- == PAGE CONTENT ================== -->
+        <main class="page">
+           <section class="header-404">
+               <div class="header-404__bg">
+                   <div class="header-404__bg-inner"></div>
+               </div>
+               <div class="header-404__body container">
+                   <div class="header-404__num-bg">
+                       <img src="img/photo/404.png" alt="">
+                   </div>
+                   <div class="header-404__img">
+                       <img src="img/photo/404-img.svg" alt="">
+                   </div>
+                   <h1 class="header-404__title title-1">
+                     Страница не найдена :(
+                   </h1>
+                   <div class="header-404__subtitle">
+                    Мы обязательно разберемся с этим недоразуманием, а пока вернитесь на главную страницу или перейдите в каталог
+                   </div>
+                   <div class="header-404__btn-wrap">
+                       <a href="#" class="btn btn-green"><span>На главную</span></a>
+                       <a href="#" class="btn btn-green"><span>В Каталог</span></a>
+                   </div>
+               </div>
+           </section>
+
+        </main>
+        <!-- == // PAGE CONTENT ================== -->
+        <!-- == FOOTER ================== -->
+        @@include('common/footer/_footer.html',{})
+        <!-- == // FOOTER ================== -->
+    </div>
+    <!-- == // WRAPPER ================== -->
+    @@include('_js.html',{})
+</body>
+
+</html>
