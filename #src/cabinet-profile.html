@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "New Project"
+})
+
+<body>
+    <!-- == WRAPPER ================== -->
+    <div class="wrapper cabinet-page cabinet-page_entity">
+        <!-- == TOP LINE ================== -->
+        @@include('common/header/_header.html',{})
+        <!-- == // TOP LINE ================== -->
+
+        <!-- == PAGE CONTENT ================== -->
+        <main class="page">
+            @@include('common/hero/_hero.html',{})
+
+            <section class="cabinet">
+                <div class="container">
+                    <nav class="breadcrumb-wrap gray" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Кабинет</li>
+                        </ol>
+                    </nav>
+                    <h2 class="cabinet__title title-2">
+                        Кабинет
+                    </h2>
+
+                    <div class="cabinet-tabs">
+                        <a href="#" class="cabinet-tabs__item ">
+                            <span>
+                                <img src="img/icons/briefcase.svg" alt="icon">
+                            </span>
+                            Юр.лица
+                            <span>
+                                <img src="img/icons/arrow.svg" alt="arrow">
+                            </span>
+                        </a>
+                        <a href="#" class="cabinet-tabs__item active">
+                            <span>
+                                <img src="img/icons/user-gray.svg" alt="icon">
+                            </span>
+                            Профиль
+                            <span>
+                                <img src="img/icons/arrow.svg" alt="arrow">
+                            </span>
+                        </a>
+                        <a href="#" class="cabinet-tabs__item">
+                            <span>
+                                <img src="img/icons/lock.svg" alt="icon">
+                            </span>
+                            Изменение пароля
+                            <span>
+                                <img src="img/icons/arrow.svg" alt="arrow">
+                            </span>
+                        </a>
+                    </div>
+
+                    <form class="profile-form" action="">
+                        <div class="profile-form__inner">
+                            <div class="profile-form__item">
+                                <label for="phone" class="profile-form__label">Телефон</label>
+                                <input type="text" id="phone" class="input _mask" data-mask="7(099)999-99-99" placeholder="Телефон">
+                            </div>
+                            <div class="profile-form__item">
+                                <label for="name" class="profile-form__label">ФИО</label>
+                                <input type="text" id="name" class="input "  placeholder="ФИО">
+                            </div>
+                            <div class="profile-form__item">
+                                <label for="email" class="profile-form__label">Эл.почта</label>
+                                <input type="email" id="email" class="input "  placeholder="Эл.почта">
+                            </div>
+                        </div>
+                        <div class="profile-form__submit-wrap">
+                            <button class="entity-form__reset" type="reset">Отменить</button>
+                            <button class="btn btn-green"><span>Сохранить</span></button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <!-- == // PAGE CONTENT ================== -->
+        <!-- == FOOTER ================== -->
+        @@include('common/footer/_footer.html',{})
+        <!-- == // FOOTER ================== -->
+    </div>
+    <!-- == // WRAPPER ================== -->
+    @@include('_js.html',{})
+
+</body>
+
+</html>

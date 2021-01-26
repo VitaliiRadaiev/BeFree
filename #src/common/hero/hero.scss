@@ -3,6 +3,10 @@
     z-index: 10;
     margin-bottom: 60px;
 
+    @media (max-width: $md2+px) {
+        display: none;
+    }
+
     &__bg {
         position: absolute;
         top: 0;

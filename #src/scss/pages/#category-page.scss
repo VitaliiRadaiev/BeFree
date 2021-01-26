@@ -308,7 +308,7 @@
         line-height: 1.1666em;
         color: rgba(#fff, 0.5);
         position: relative;
-
+        font-family: $mainFontFamily;
         &:before {
             position: absolute;
             content: '';

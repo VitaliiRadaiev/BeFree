@@ -434,6 +434,19 @@ textarea {
 			&:hover {
 				background-color: $blue;
 				color: #fff;
+				& .plus {
+					&:before, &:after {
+						background-color: #fff;
+					
+					}
+				}
+			}
+		}
+
+		& .plus {
+			&:before, &:after {
+				background-color: $blue;
+				transition: all .2s ease;
 			}
 		}
 	}
