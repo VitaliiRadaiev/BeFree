@@ -2144,12 +2144,21 @@ textarea {
   position: relative;
 }
 
-.menu .nav-link._active {
-  color: #5CDEDA;
+.menu .nav-link:before {
+  position: absolute;
+  content: '';
+  bottom: -30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background-color: #6D71F9;
 }
 
-.menu .nav-link._active.dropdown-toggle {
-  margin-bottom: 10px;
+.menu .nav-link._active {
+  color: #5CDEDA;
 }
 
 .menu .nav-link.dropdown-toggle::after {
@@ -4864,6 +4873,9 @@ textarea {
   line-height: 1.1666em;
   color: rgba(255, 255, 255, 0.5);
   position: relative;
+}
+
+.header-select .select__value > span {
   font-family: "Rubik", sans-serif;
 }
 
@@ -6435,6 +6447,14 @@ textarea {
     background-color: rgba(0, 0, 0, 0.05);
   }
 
+  .menu .nav-link.active {
+    color: #6D71F9;
+  }
+
+  .menu .nav-link.active:before {
+    width: 90%;
+  }
+
   .menu .nav-link .plus {
     display: none;
   }
@@ -6743,6 +6763,10 @@ textarea {
     font-size: 14px;
   }
 
+  .menu .nav-link:before {
+    bottom: -32px;
+  }
+
   .footer__bg-inner {
     width: 3342px;
   }
@@ -7000,6 +7024,10 @@ textarea {
     padding: 0;
     padding-right: 25px;
     text-transform: uppercase;
+  }
+
+  .menu .nav-link:before {
+    display: none;
   }
 
   .footer__bg-inner {
@@ -8732,10 +8760,6 @@ textarea {
 
   .menu__inner {
     padding: 30px 15px 40px;
-  }
-
-  .menu .nav-link._active.dropdown-toggle {
-    margin-bottom: 4px;
   }
 
   .menu .btn {

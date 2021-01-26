@@ -365,15 +365,38 @@
             }
         }
 
-        &._active {
-            color: $turquoise;
-            &.dropdown-toggle {
-                margin-bottom: 10px;
+        &.active {
+            @media (min-width: 992px) {
+                color: $blue;
 
-                @media (max-width: $md4+px) {
-                    margin-bottom: 4px;
+                &:before {
+                    width: 90%;
                 }
             }
+
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0%;
+            height: 2px;
+            background-color: $blue;
+
+            @media (max-width: 1267px) {
+                bottom: -32px;
+            }
+
+            @media (max-width: $md2+px) {
+                display: none;
+            }
+        }
+
+        &._active {
+            color: $turquoise;
         }
 
 
