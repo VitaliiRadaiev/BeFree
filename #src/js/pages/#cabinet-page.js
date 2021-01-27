@@ -137,6 +137,12 @@
                         })
                     })
                 })
+
+                let loadBtn = form.querySelector('.entity-form__photo-list .load-btn');
+                let photoBLock = form.querySelector('.entity-form__photo');
+                if(document.documentElement.clientWidth < 768) {
+                    photoBLock.append(loadBtn);
+                }
         })
     }
 
