@@ -7498,6 +7498,21 @@ textarea {
     display: none;
   }
 
+  .cabinet .breadcrumb-wrap {
+    margin-top: 30px;
+  }
+
+  .cabinet .breadcrumb-wrap .breadcrumb {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .cabinet__title {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
   .entity-block {
     display: block;
   }
@@ -8328,6 +8343,10 @@ textarea {
     margin-bottom: 66px;
   }
 
+  .cabinet__title {
+    margin-bottom: 40px;
+  }
+
   .cabinet-tabs {
     margin-bottom: 60px;
   }
@@ -9091,6 +9110,10 @@ textarea {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+
+  .cabinet__title {
+    margin-bottom: 30px;
   }
 
   .entity-block {

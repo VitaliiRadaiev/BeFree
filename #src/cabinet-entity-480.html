@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "New Project"
+})
+
+<body>
+    <!-- == WRAPPER ================== -->
+    <div class="wrapper cabinet-page cabinet-page_entity">
+        <!-- == TOP LINE ================== -->
+        @@include('common/header/_header.html',{})
+        <!-- == // TOP LINE ================== -->
+
+        <!-- == PAGE CONTENT ================== -->
+        <main class="page">
+            @@include('common/hero/_hero.html',{})
+
+            <section class="cabinet">
+                <div class="container">
+                    <nav class="breadcrumb-wrap gray" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                          <li class="breadcrumb-item"><a href="#">Юр.лица</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Юр.лица</li>
+                        </ol>
+                    </nav>
+                    <h2 class="cabinet__title title-2">
+                        Юр.лица
+                    </h2>
+
+                    <div class="entity-block">
+                        <div class="entity-block__column-1">
+                            <ul class="entity-list">
+                                <li class="entity-list__item">
+                                    <a href="#entityForm-1" class="entity-list__triggers active">
+                                        <span>
+                                            <img class="img-svg" src="img/icons/product-filter/04.svg" alt="icons">
+                                        </span>
+                                        Название магазина 1
+                                        <span class="plus"></span>
+                                    </a>
+                                </li>
+                                <li class="entity-list__item">
+                                    <a href="#entityForm-2" class="entity-list__triggers">
+                                        <span>
+                                            <img class="img-svg" src="img/icons/product-filter/04.svg" alt="icons">
+                                        </span>
+                                        Название магазина 2
+                                        <span class="plus"></span>
+                                    </a>
+                                </li>
+                                <li class="entity-list__item">
+                                    <a href="#entityForm-3" class="entity-list__triggers">
+                                        <span>
+                                            <img class="img-svg" src="img/icons/product-filter/04.svg" alt="icons">
+                                        </span>
+                                        Название магазина 3
+                                        <span class="plus"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn-add-entity">
+                                <span class="plus"></span>
+                                Добавить юр.лицо
+                            </a>
+                        </div>
+
+
+                        <div class="entity-block__column-2">
+                            <form id="entityForm-1" action="#" class="entity-form active">
+                                <div class="entity-form__top-label">
+                                    Права подтверждены
+                                    <span>
+                                        <img src="img/icons/circle-check.svg" alt="icon check">
+                                    </span>
+                                </div>
+
+                                <div class="entity-form__photo entity-form__row">
+                                    <h5 class="entity-form__title title-5">Фото</h5>
+                                    <ul class="entity-form__photo-list">
+                                        <li>
+                                            <span class="ibg">
+                                                <img src="img/photo/info-slider01.jpg" alt="photo">
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="ibg">
+                                                <img src="img/photo/from-photo.jpg" alt="photo">
+                                            </span>
+                                        </li>
+                                        <li class="load-btn">
+                                            <div class="form-group entity-form__photo-add">
+                                                <label for="exampleFormControlFile1"><span class="plus"></span> Добавить фото </label>
+                                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="entity-form__main-info entity-form__row">
+                                    <h5 class="entity-form__title title-5">
+                                        Основная информация
+
+                                    </h5>
+                                    <div class="entity-form__main-info-inner">
+                                        <div class="entity-form__input-wrap">
+                                            <select class="form-control main-select">
+                                                <option>Выберите юр.лицо</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        <div class="entity-form__input-wrap">
+                                           <input type="text" class="input" placeholder="Название">
+                                        </div>
+                                        <div class="entity-form__input-wrap">
+                                            <input type="text" class="input" placeholder="Ссылка на сайт">
+                                        </div>
+                                        <div class="entity-form__input-wrap">
+                                            <select class="form-control main-select">
+                                                <option>Выберите валюту</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        <div class="entity-form__textarea-wrap">
+                                            <textarea class="textarea" placeholder="Описание магазина"></textarea>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="entity-form__add-point add-point">
+                                    <h5 class="entity-form__title title-5">
+                                        Адрес, телефон и график работы
+                                        <a class="btn btn-outline-primary" href="#">
+                                            <span class="plus"></span>
+                                            Добавить точку
+                                        </a>  
+                                    </h5>
+                                    <div class="add-point__list">
+                                        <div class="add-point__item">
+                                            <h6 class="add-point__title title-6">Первая точка</h6>
+                                            <div class="add-point__inner">
+
+                                                <div class="add-point__top">
+                                                    <div class="entity-form__input-wrap">
+                                                        <input type="text" class="input" placeholder="Страна">
+                                                    </div>
+                                                    <div class="entity-form__input-wrap">
+                                                        <input type="text" class="input" placeholder="Город">
+                                                    </div>
+                                                    <div class="entity-form__input-wrap">
+                                                        <input type="text" class="input" placeholder="Улица">
+                                                    </div>
+                                                    <div class="entity-form__input-wrap fourth">
+                                                        <input type="text" class="input" placeholder="Дом">
+                                                    </div>
+                                                    <div class="entity-form__input-wrap fourth">
+                                                        <input type="text" class="input" placeholder="Помещение">
+                                                    </div>
+                                                    <div class="entity-form__input-wrap">
+                                                        <input type="text" class="input _mask" data-mask="7(099)999-99-99" placeholder="Телефон">
+                                                    </div>
+                                                    <div class="entity-form__input-wrap ">
+                                                        <input type="text" class="input _mask" data-mask="7(099)999-99-99" placeholder="Телефон">
+                                                        <a href="#" class="btn-delete"><span></span></a>
+                                                    </div>
+                                                    <a href="#" class="btn-add">
+                                                        <span class="plus"></span>
+                                                        Добавить телефон
+                                                    </a>
+                                                </div>
+                                                <div class="add-point__schedule schedule-block">
+                                                    <div class="schedule-block__item">
+                                                        <div class="checkbox-wrap">
+                                                            <input class="checkbox" type="checkbox" id="mon" name="" checked="">
+                                                            <label class="checkbox-wrap__label" for="mon">Понедельник</label>
+                                                        </div>
+                                                        <div class="schedule-block__item-inner">
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="btn-add">
+                                                                <span class="plus"></span>
+                                                                Добавить время
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="schedule-block__item">
+                                                        <div class="checkbox-wrap">
+                                                            <input class="checkbox" type="checkbox" id="tue" name="" checked="">
+                                                            <label class="checkbox-wrap__label" for="tue">Вторник</label>
+                                                        </div>
+                                                        <div class="schedule-block__item-inner">
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                            </div>
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                                <a href="#" class="btn-delete"><span></span></a>
+                                                            </div>
+                                                            <a href="#" class="btn-add">
+                                                                <span class="plus"></span>
+                                                                Добавить время
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="schedule-block__item">
+                                                        <div class="checkbox-wrap">
+                                                            <input class="checkbox" type="checkbox" id="wed" name="" checked="">
+                                                            <label class="checkbox-wrap__label" for="wed">Среда</label>
+                                                        </div>
+                                                        <div class="schedule-block__item-inner">
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="btn-add">
+                                                                <span class="plus"></span>
+                                                                Добавить время
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="schedule-block__item">
+                                                        <div class="checkbox-wrap">
+                                                            <input class="checkbox" type="checkbox" id="thu" name="" checked="">
+                                                            <label class="checkbox-wrap__label" for="thu">Четверг</label>
+                                                        </div>
+                                                        <div class="schedule-block__item-inner">
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="btn-add">
+                                                                <span class="plus"></span>
+                                                                Добавить время
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="schedule-block__item">
+                                                        <div class="checkbox-wrap">
+                                                            <input class="checkbox" type="checkbox" id="fri" name="" checked="">
+                                                            <label class="checkbox-wrap__label" for="fri">Пятница</label>
+                                                        </div>
+                                                        <div class="schedule-block__item-inner">
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="btn-add">
+                                                                <span class="plus"></span>
+                                                                Добавить время
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="schedule-block__item">
+                                                        <div class="checkbox-wrap">
+                                                            <input class="checkbox" type="checkbox" id="sat" name="" >
+                                                            <label class="checkbox-wrap__label" for="sat">Суббота</label>
+                                                        </div>
+                                                        <div class="schedule-block__item-inner">
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="btn-add">
+                                                                <span class="plus"></span>
+                                                                Добавить время
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="schedule-block__item">
+                                                        <div class="checkbox-wrap">
+                                                            <input class="checkbox" type="checkbox" id="sun" name="" >
+                                                            <label class="checkbox-wrap__label" for="sun">Воскресенье</label>
+                                                        </div>
+                                                        <div class="schedule-block__item-inner">
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="btn-add">
+                                                                <span class="plus"></span>
+                                                                Добавить время
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>   
+                                                <div class="add-point__bottom">
+                                                    <textarea class="textarea" placeholder="Дополнительная информация"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="entity-form__submit-wrap">
+                                    <button class="entity-form__reset" type="reset">Отменить</button>
+                                    <button class="btn btn-green"><span>Сохранить</span></button>
+                                </div>
+                            </form>
+                            <form id="entityForm-2" action="#" class="entity-form ">
+                                <div class="entity-form__top-label">
+                                    Права подтверждены
+                                    <span>
+                                        <img src="img/icons/circle-check.svg" alt="icon check">
+                                    </span>
+                                </div>
+
+                                <div class="entity-form__photo entity-form__row">
+                                    <h5 class="entity-form__title title-5">Фото Example 2</h5>
+                                    <ul class="entity-form__photo-list">
+                                        <li>
+                                            <span class="ibg">
+                                                <img src="img/photo/info-slider01.jpg" alt="photo">
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="ibg">
+                                                <img src="img/photo/from-photo.jpg" alt="photo">
+                                            </span>
+                                        </li>
+                                        <li class="load-btn">
+                                            <div class="form-group entity-form__photo-add">
+                                                <label for="exampleFormControlFile2"><span class="plus"></span> Добавить фото </label>
+                                                <input type="file" class="form-control-file" id="exampleFormControlFile2">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="entity-form__main-info entity-form__row">
+                                    <h5 class="entity-form__title title-5">
+                                        Основная информация
+
+                                    </h5>
+                                    <div class="entity-form__main-info-inner">
+                                        <div class="entity-form__input-wrap">
+                                            <select class="form-control main-select">
+                                                <option>Выберите юр.лицо</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        <div class="entity-form__input-wrap">
+                                           <input type="text" class="input" placeholder="Название">
+                                        </div>
+                                        <div class="entity-form__input-wrap">
+                                            <input type="text" class="input" placeholder="Ссылка на сайт">
+                                        </div>
+                                        <div class="entity-form__input-wrap">
+                                            <select class="form-control main-select">
+                                                <option>Выберите валюту</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        <div class="entity-form__textarea-wrap">
+                                            <textarea class="textarea" placeholder="Описание магазина"></textarea>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="entity-form__add-point add-point">
+                                    <h5 class="entity-form__title title-5">
+                                        Адрес, телефон и график работы
+                                        <a class="btn btn-outline-primary" href="#">
+                                            <span class="plus"></span>
+                                            Добавить точку
+                                        </a>  
+                                    </h5>
+                                    <div class="add-point__list">
+                                        <div class="add-point__item">
+                                            <h6 class="add-point__title title-6">Первая точка</h6>
+                                            <div class="add-point__inner">
+
+                                                <div class="add-point__top">
+                                                    <div class="entity-form__input-wrap">
+                                                        <input type="text" class="input" placeholder="Страна">
+                                                    </div>
+                                                    <div class="entity-form__input-wrap">
+                                                        <input type="text" class="input" placeholder="Город">
+                                                    </div>
+                                                    <div class="entity-form__input-wrap">
+                                                        <input type="text" class="input" placeholder="Улица">
+                                                    </div>
+                                                    <div class="entity-form__input-wrap fourth">
+                                                        <input type="text" class="input" placeholder="Дом">
+                                                    </div>
+                                                    <div class="entity-form__input-wrap fourth">
+                                                        <input type="text" class="input" placeholder="Помещение">
+                                                    </div>
+                                                    <div class="entity-form__input-wrap">
+                                                        <input type="text" class="input _mask" data-mask="7(099)999-99-99" placeholder="Телефон">
+                                                    </div>
+                                                    <div class="entity-form__input-wrap ">
+                                                        <input type="text" class="input _mask" data-mask="7(099)999-99-99" placeholder="Телефон">
+                                                        <a href="#" class="btn-delete"><span></span></a>
+                                                    </div>
+                                                    <a href="#" class="btn-add">
+                                                        <span class="plus"></span>
+                                                        Добавить телефон
+                                                    </a>
+                                                </div>
+                                                <div class="add-point__schedule schedule-block">
+                                                    <div class="schedule-block__item">
+                                                        <div class="checkbox-wrap">
+                                                            <input class="checkbox" type="checkbox" id="mon2" name="" checked="">
+                                                            <label class="checkbox-wrap__label" for="mon2">Понедельник</label>
+                                                        </div>
+                                                        <div class="schedule-block__item-inner">
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="btn-add">
+                                                                <span class="plus"></span>
+                                                                Добавить время
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="schedule-block__item">
+                                                        <div class="checkbox-wrap">
+                                                            <input class="checkbox" type="checkbox" id="tue2" name="" checked="">
+                                                            <label class="checkbox-wrap__label" for="tue2">Вторник</label>
+                                                        </div>
+                                                        <div class="schedule-block__item-inner">
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                            </div>
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                                <a href="#" class="btn-delete"><span></span></a>
+                                                            </div>
+                                                            <a href="#" class="btn-add">
+                                                                <span class="plus"></span>
+                                                                Добавить время
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="schedule-block__item">
+                                                        <div class="checkbox-wrap">
+                                                            <input class="checkbox" type="checkbox" id="wed2" name="" checked="">
+                                                            <label class="checkbox-wrap__label" for="wed2">Среда</label>
+                                                        </div>
+                                                        <div class="schedule-block__item-inner">
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="btn-add">
+                                                                <span class="plus"></span>
+                                                                Добавить время
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="schedule-block__item">
+                                                        <div class="checkbox-wrap">
+                                                            <input class="checkbox" type="checkbox" id="thu2" name="" checked="">
+                                                            <label class="checkbox-wrap__label" for="thu2">Четверг</label>
+                                                        </div>
+                                                        <div class="schedule-block__item-inner">
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="btn-add">
+                                                                <span class="plus"></span>
+                                                                Добавить время
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="schedule-block__item">
+                                                        <div class="checkbox-wrap">
+                                                            <input class="checkbox" type="checkbox" id="fri2" name="" checked="">
+                                                            <label class="checkbox-wrap__label" for="fri2">Пятница</label>
+                                                        </div>
+                                                        <div class="schedule-block__item-inner">
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="btn-add">
+                                                                <span class="plus"></span>
+                                                                Добавить время
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="schedule-block__item">
+                                                        <div class="checkbox-wrap">
+                                                            <input class="checkbox" type="checkbox" id="sat2" name="" >
+                                                            <label class="checkbox-wrap__label" for="sat2">Суббота</label>
+                                                        </div>
+                                                        <div class="schedule-block__item-inner">
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="btn-add">
+                                                                <span class="plus"></span>
+                                                                Добавить время
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="schedule-block__item">
+                                                        <div class="checkbox-wrap">
+                                                            <input class="checkbox" type="checkbox" id="sun2" name="" >
+                                                            <label class="checkbox-wrap__label" for="sun2">Воскресенье</label>
+                                                        </div>
+                                                        <div class="schedule-block__item-inner">
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="btn-add">
+                                                                <span class="plus"></span>
+                                                                Добавить время
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>   
+                                                <div class="add-point__bottom">
+                                                    <textarea class="textarea" placeholder="Дополнительная информация"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="entity-form__submit-wrap">
+                                    <button class="entity-form__reset" type="reset">Отменить</button>
+                                    <button class="btn btn-green"><span>Сохранить</span></button>
+                                </div>
+                            </form>
+                            <form id="entityForm-3" action="#" class="entity-form ">
+                                <div class="entity-form__top-label">
+                                    Права подтверждены
+                                    <span>
+                                        <img src="img/icons/circle-check.svg" alt="icon check">
+                                    </span>
+                                </div>
+
+                                <div class="entity-form__photo entity-form__row">
+                                    <h5 class="entity-form__title title-5">Фото Example 3</h5>
+                                    <ul class="entity-form__photo-list">
+                                        <li>
+                                            <span class="ibg">
+                                                <img src="img/photo/info-slider01.jpg" alt="photo">
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="ibg">
+                                                <img src="img/photo/from-photo.jpg" alt="photo">
+                                            </span>
+                                        </li>
+                                        <li class="load-btn">
+                                            <div class="form-group entity-form__photo-add">
+                                                <label for="exampleFormControlFile3"><span class="plus"></span> Добавить фото </label>
+                                                <input type="file" class="form-control-file" id="exampleFormControlFile3">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="entity-form__main-info entity-form__row">
+                                    <h5 class="entity-form__title title-5">
+                                        Основная информация
+
+                                    </h5>
+                                    <div class="entity-form__main-info-inner">
+                                        <div class="entity-form__input-wrap">
+                                            <select class="form-control main-select">
+                                                <option>Выберите юр.лицо</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        <div class="entity-form__input-wrap">
+                                           <input type="text" class="input" placeholder="Название">
+                                        </div>
+                                        <div class="entity-form__input-wrap">
+                                            <input type="text" class="input" placeholder="Ссылка на сайт">
+                                        </div>
+                                        <div class="entity-form__input-wrap">
+                                            <select class="form-control main-select">
+                                                <option>Выберите валюту</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                        <div class="entity-form__textarea-wrap">
+                                            <textarea class="textarea" placeholder="Описание магазина"></textarea>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="entity-form__add-point add-point">
+                                    <h5 class="entity-form__title title-5">
+                                        Адрес, телефон и график работы
+                                        <a class="btn btn-outline-primary" href="#">
+                                            <span class="plus"></span>
+                                            Добавить точку
+                                        </a>  
+                                    </h5>
+                                    <div class="add-point__list">
+                                        <div class="add-point__item">
+                                            <h6 class="add-point__title title-6">Первая точка</h6>
+                                            <div class="add-point__inner">
+
+                                                <div class="add-point__top">
+                                                    <div class="entity-form__input-wrap">
+                                                        <input type="text" class="input" placeholder="Страна">
+                                                    </div>
+                                                    <div class="entity-form__input-wrap">
+                                                        <input type="text" class="input" placeholder="Город">
+                                                    </div>
+                                                    <div class="entity-form__input-wrap">
+                                                        <input type="text" class="input" placeholder="Улица">
+                                                    </div>
+                                                    <div class="entity-form__input-wrap fourth">
+                                                        <input type="text" class="input" placeholder="Дом">
+                                                    </div>
+                                                    <div class="entity-form__input-wrap fourth">
+                                                        <input type="text" class="input" placeholder="Помещение">
+                                                    </div>
+                                                    <div class="entity-form__input-wrap">
+                                                        <input type="text" class="input _mask" data-mask="7(099)999-99-99" placeholder="Телефон">
+                                                    </div>
+                                                    <div class="entity-form__input-wrap ">
+                                                        <input type="text" class="input _mask" data-mask="7(099)999-99-99" placeholder="Телефон">
+                                                        <a href="#" class="btn-delete"><span></span></a>
+                                                    </div>
+                                                    <a href="#" class="btn-add">
+                                                        <span class="plus"></span>
+                                                        Добавить телефон
+                                                    </a>
+                                                </div>
+                                                <div class="add-point__schedule schedule-block">
+                                                    <div class="schedule-block__item">
+                                                        <div class="checkbox-wrap">
+                                                            <input class="checkbox" type="checkbox" id="mon3" name="" checked="">
+                                                            <label class="checkbox-wrap__label" for="mon3">Понедельник</label>
+                                                        </div>
+                                                        <div class="schedule-block__item-inner">
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="btn-add">
+                                                                <span class="plus"></span>
+                                                                Добавить время
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="schedule-block__item">
+                                                        <div class="checkbox-wrap">
+                                                            <input class="checkbox" type="checkbox" id="tue3" name="" checked="">
+                                                            <label class="checkbox-wrap__label" for="tue3">Вторник</label>
+                                                        </div>
+                                                        <div class="schedule-block__item-inner">
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                            </div>
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                                <a href="#" class="btn-delete"><span></span></a>
+                                                            </div>
+                                                            <a href="#" class="btn-add">
+                                                                <span class="plus"></span>
+                                                                Добавить время
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="schedule-block__item">
+                                                        <div class="checkbox-wrap">
+                                                            <input class="checkbox" type="checkbox" id="wed3" name="" checked="">
+                                                            <label class="checkbox-wrap__label" for="wed3">Среда</label>
+                                                        </div>
+                                                        <div class="schedule-block__item-inner">
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="btn-add">
+                                                                <span class="plus"></span>
+                                                                Добавить время
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="schedule-block__item">
+                                                        <div class="checkbox-wrap">
+                                                            <input class="checkbox" type="checkbox" id="thu3" name="" checked="">
+                                                            <label class="checkbox-wrap__label" for="thu3">Четверг</label>
+                                                        </div>
+                                                        <div class="schedule-block__item-inner">
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="btn-add">
+                                                                <span class="plus"></span>
+                                                                Добавить время
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="schedule-block__item">
+                                                        <div class="checkbox-wrap">
+                                                            <input class="checkbox" type="checkbox" id="fri3" name="" checked="">
+                                                            <label class="checkbox-wrap__label" for="fri3">Пятница</label>
+                                                        </div>
+                                                        <div class="schedule-block__item-inner">
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="btn-add">
+                                                                <span class="plus"></span>
+                                                                Добавить время
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="schedule-block__item">
+                                                        <div class="checkbox-wrap">
+                                                            <input class="checkbox" type="checkbox" id="sat3" name="" >
+                                                            <label class="checkbox-wrap__label" for="sat3">Суббота</label>
+                                                        </div>
+                                                        <div class="schedule-block__item-inner">
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="btn-add">
+                                                                <span class="plus"></span>
+                                                                Добавить время
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="schedule-block__item">
+                                                        <div class="checkbox-wrap">
+                                                            <input class="checkbox" type="checkbox" id="sun3" name="" >
+                                                            <label class="checkbox-wrap__label" for="sun3">Воскресенье</label>
+                                                        </div>
+                                                        <div class="schedule-block__item-inner">
+                                                            <div class="schedule-block__inputs-time">
+                                                                <div class="schedule-block__inputs-time-wrap">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                    <input type="text" class="input _mask" data-mask="99  :  99" placeholder=":">
+                                                                </div>
+                                                            </div>
+                                                            <a href="#" class="btn-add">
+                                                                <span class="plus"></span>
+                                                                Добавить время
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>   
+                                                <div class="add-point__bottom">
+                                                    <textarea class="textarea" placeholder="Дополнительная информация"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="entity-form__submit-wrap">
+                                    <button class="entity-form__reset" type="reset">Отменить</button>
+                                    <button class="btn btn-green"><span>Сохранить</span></button>
+                                </div>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- == // PAGE CONTENT ================== -->
+        <!-- == FOOTER ================== -->
+        @@include('common/footer/_footer.html',{})
+        <!-- == // FOOTER ================== -->
+    </div>
+    <!-- == // WRAPPER ================== -->
+    @@include('_js.html',{})
+
+</body>
+
+</html>
