@@ -11,7 +11,7 @@
         <nav class="header__menu menu">
             <div class="menu__inner">
                 <ul class="nav justify-content-end">
-                    <li class="nav-item dropdown">
+                    <!-- <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Каталог <span class="plus"></span></a>
                       <div class="dropdown-menu">
                         <a class="dropdown-item" href="#">Интернет-магазин</a>
@@ -19,6 +19,12 @@
                         <a class="dropdown-item" href="#">Отели</a>
                         <a class="dropdown-item" href="#">СПА</a>
                       </div>
+                    </li> -->
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Online</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link " href="#">Life</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link active" href="#">О нас</a>
@@ -84,11 +90,20 @@
                 
               </div>
         </nav>
-        <div class="header__languages languages">
+        <!-- <div class="header__languages languages">
             <a class="languages__item " href="#">En</a>
             <a class="languages__item active" href="#">ru</a>
+        </div> -->
+        <div class="header__languages languages dropdown">
+          <a class="languages__item dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ru</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">En</a>
+            <a class="dropdown-item" href="#">KR</a>
+          </div>
         </div>
+
         <a href="#popupStatement" class="btn btn-outline-primary popup-link" data-da="menu__inner,first,767.8">Войти</a>
+       
         <div class="header__burger">
             <div class="burger-wrap">
                 <div class="burger" data-activEl="menu">

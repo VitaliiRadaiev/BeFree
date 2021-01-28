@@ -2094,14 +2094,13 @@ textarea {
 }
 
 .header.isOpenMenu .header__languages.languages .languages__item {
-  background-color: #6D71F9;
-  border-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
-}
-
-.header.isOpenMenu .header__languages.languages .languages__item.active {
   border-color: #5CDEDA;
   color: #5CDEDA;
+  background-color: #6D71F9;
+}
+
+.header.isOpenMenu .header__languages.languages .languages__item:after {
+  border-top: 0.3em solid #5CDEDA;
 }
 
 .header.isOpenMenu .btn.btn-outline-primary {
@@ -2200,6 +2199,14 @@ textarea {
   display: flex;
 }
 
+.languages.dropdown .dropdown-menu {
+  min-width: auto;
+  left: 50% !important;
+  -webkit-transform: translateX(-50%) translateY(40px) !important;
+      -ms-transform: translateX(-50%) translateY(40px) !important;
+          transform: translateX(-50%) translateY(40px) !important;
+}
+
 .languages__item {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2209,7 +2216,6 @@ textarea {
   line-height: 21px;
   color: #2A2929;
   text-transform: uppercase;
-  border: 2px solid #F5F5F8;
   border-radius: 20px;
   min-width: 85px;
   height: 40px;
@@ -2224,9 +2230,6 @@ textarea {
   -webkit-transition: all .2s ease;
   -o-transition: all .2s ease;
   transition: all .2s ease;
-}
-
-.languages__item.active {
   border: 2px solid #6D71F9;
   z-index: 2;
   margin-right: 0 !important;
@@ -2245,6 +2248,27 @@ textarea {
   margin-left: -26px;
   min-width: 95px;
   padding-left: 10px;
+}
+
+.languages__item:after {
+  border-top: 0.3em solid #6D71F9;
+}
+
+.dropdown .dropdown-menu {
+  background: -o-linear-gradient(top, #5CDEDA 0%, #2FFF6A 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#5CDEDA), to(#2FFF6A));
+  background: linear-gradient(180deg, #5CDEDA 0%, #2FFF6A 100%);
+  border-radius: 5px !important;
+}
+
+.dropdown .dropdown-item {
+  font-size: 14px;
+  color: #6D71F9;
+  line-height: 1.4em;
+}
+
+.dropdown .dropdown-item:hover {
+  background-color: rgba(109, 113, 249, 0.2);
 }
 
 .footer {
@@ -4267,206 +4291,26 @@ textarea {
   margin-top: 20px;
 }
 
-.promo-header {
+.cryptocurrency__slider {
+  padding-bottom: 10px;
+}
+
+.cryptocurrency .swiper-container {
+  padding: 10px;
+  margin: -10px;
+}
+
+.cryptocurrency .swiper-pagination {
   position: relative;
-  z-index: 10;
+  z-index: 3;
 }
 
-.promo-header__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.cryptocurrency .swiper-pagination .swiper-pagination-bullet {
+  background-color: #fff;
 }
 
-.promo-header__bg:after {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 75%;
-  background-color: #6D71F9;
-  z-index: 1;
-}
-
-.promo-header__bg > .promo-header__img {
-  display: none;
-}
-
-.promo-header__bg-inner {
-  z-index: 2;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 7342px;
-  padding-bottom: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #6D71F9;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  border-radius: 50%;
-  -webkit-box-shadow: 0px 24px 24px rgba(109, 113, 249, 0.25);
-          box-shadow: 0px 24px 24px rgba(109, 113, 249, 0.25);
-  overflow: hidden;
-}
-
-.promo-header__bg-inner .container {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 100%;
-  height: 100%;
-}
-
-.promo-header__bg-bottom {
-  width: 100%;
-}
-
-.promo-header__bg-bottom svg {
-  width: 100%;
-  height: auto;
-  -webkit-transform: translateY(-1%);
-      -ms-transform: translateY(-1%);
-          transform: translateY(-1%);
-}
-
-.promo-header__img {
-  position: absolute;
-  bottom: -51px;
-  right: -346px;
-  width: 1225px;
-  z-index: 5;
-}
-
-.promo-header__img img {
-  width: 100%;
-}
-
-.promo-header__body {
-  padding-top: 100px !important;
-  padding-bottom: 80px !important;
-  position: relative;
-  z-index: 2;
-}
-
-.promo-header__title {
-  margin-bottom: 20px;
-  max-width: 17.2em;
-  position: relative;
-}
-
-.promo-header__subtitle {
-  position: relative;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 1.42em;
-  color: #FFFFFF;
-  margin-bottom: 76px;
-}
-
-.promo-header__subtitle > strong {
-  color: #5CDEDA;
-  font-weight: 500;
-}
-
-.promo-header__local-icon {
-  position: absolute;
-  z-index: 5;
-  left: 50%;
-  bottom: 0;
-  -webkit-transform: translate(-50%, 50%);
-      -ms-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
-}
-
-.promo-header-search {
-  margin-bottom: 10px !important;
-}
-
-.promo-header-search__input {
-  background: rgba(255, 255, 255, 0.1);
-  -webkit-box-shadow: -12px 3px 24px #7D82FF, 12px 12px 24px #5D60D4;
-          box-shadow: -12px 3px 24px #7D82FF, 12px 12px 24px #5D60D4;
-  border-radius: 30px !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-height: 60px;
-  outline: none;
-  border: 1px solid transparent;
-  padding: 10px 30px;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 1.1em;
-  color: #FFFFFF;
-  -webkit-transition: all .2s ease;
-  -o-transition: all .2s ease;
-  transition: all .2s ease;
-  margin-right: 20px;
-}
-
-.promo-header-search__input::-webkit-input-placeholder {
-  font-size: 18px;
-  line-height: 1.1em;
-  color: #FFFFFF;
-}
-
-.promo-header-search__input::-moz-placeholder {
-  font-size: 18px;
-  line-height: 1.1em;
-  color: #FFFFFF;
-}
-
-.promo-header-search__input:-ms-input-placeholder {
-  font-size: 18px;
-  line-height: 1.1em;
-  color: #FFFFFF;
-}
-
-.promo-header-search__input::-ms-input-placeholder {
-  font-size: 18px;
-  line-height: 1.1em;
-  color: #FFFFFF;
-}
-
-.promo-header-search__input::placeholder {
-  font-size: 18px;
-  line-height: 1.1em;
-  color: #FFFFFF;
-}
-
-.promo-header-search__input:focus {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  font-size: 18px;
-  line-height: 1.1em;
-  color: #FFFFFF;
-}
-
-.promo-header-search button.btn ._icon {
-  display: none;
+.cryptocurrency .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #5CDEDA;
 }
 
 .cryptocurrency__list {
@@ -4484,8 +4328,8 @@ textarea {
   position: relative;
   background: -o-linear-gradient(345.02deg, #6266E0 0%, #7579FF 100%);
   background: linear-gradient(104.98deg, #6266E0 0%, #7579FF 100%);
-  -webkit-box-shadow: -12px -12px 24px #7D82FF, 12px 12px 24px #5D60D4;
-          box-shadow: -12px -12px 24px #7D82FF, 12px 12px 24px #5D60D4;
+  -webkit-box-shadow: -14px -12px 24px #6D71F9, 12px 12px 24px #5D60D4;
+          box-shadow: -14px -12px 24px #6D71F9, 12px 12px 24px #5D60D4;
   border-radius: 5px;
   min-height: 120px;
   padding: 46px 15px 20px;
@@ -4644,6 +4488,208 @@ textarea {
 
 .cryptocurrency__item-cost > span {
   color: #5CDEDA;
+}
+
+.promo-header {
+  position: relative;
+  z-index: 10;
+}
+
+.promo-header__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.promo-header__bg:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75%;
+  background-color: #6D71F9;
+  z-index: 1;
+}
+
+.promo-header__bg > .promo-header__img {
+  display: none;
+}
+
+.promo-header__bg-inner {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 7342px;
+  padding-bottom: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #6D71F9;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 24px 24px rgba(109, 113, 249, 0.25);
+          box-shadow: 0px 24px 24px rgba(109, 113, 249, 0.25);
+  overflow: hidden;
+}
+
+.promo-header__bg-inner .container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+}
+
+.promo-header__bg-bottom {
+  width: 100%;
+}
+
+.promo-header__bg-bottom svg {
+  width: 100%;
+  height: auto;
+  -webkit-transform: translateY(-1%);
+      -ms-transform: translateY(-1%);
+          transform: translateY(-1%);
+}
+
+.promo-header__img {
+  position: absolute;
+  bottom: -68px;
+  right: -514px;
+  width: 1564px;
+  z-index: 5;
+}
+
+.promo-header__img img {
+  width: 100%;
+}
+
+.promo-header__body {
+  padding-top: 100px !important;
+  padding-bottom: 80px !important;
+  position: relative;
+  z-index: 2;
+}
+
+.promo-header__title {
+  margin-bottom: 20px;
+  max-width: 17.2em;
+  position: relative;
+}
+
+.promo-header__subtitle {
+  position: relative;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1.42em;
+  color: #FFFFFF;
+  margin-bottom: 76px;
+}
+
+.promo-header__subtitle > strong {
+  color: #5CDEDA;
+  font-weight: 500;
+}
+
+.promo-header__local-icon {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 50%);
+      -ms-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+}
+
+.promo-header-search {
+  margin-bottom: 10px !important;
+}
+
+.promo-header-search__input {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: -12px 3px 24px #7D82FF, 12px 12px 24px #5D60D4;
+          box-shadow: -12px 3px 24px #7D82FF, 12px 12px 24px #5D60D4;
+  border-radius: 30px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 60px;
+  outline: none;
+  border: 1px solid transparent;
+  padding: 10px 30px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.1em;
+  color: #FFFFFF;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  margin-right: 20px;
+}
+
+.promo-header-search__input::-webkit-input-placeholder {
+  font-size: 18px;
+  line-height: 1.1em;
+  color: #FFFFFF;
+}
+
+.promo-header-search__input::-moz-placeholder {
+  font-size: 18px;
+  line-height: 1.1em;
+  color: #FFFFFF;
+}
+
+.promo-header-search__input:-ms-input-placeholder {
+  font-size: 18px;
+  line-height: 1.1em;
+  color: #FFFFFF;
+}
+
+.promo-header-search__input::-ms-input-placeholder {
+  font-size: 18px;
+  line-height: 1.1em;
+  color: #FFFFFF;
+}
+
+.promo-header-search__input::placeholder {
+  font-size: 18px;
+  line-height: 1.1em;
+  color: #FFFFFF;
+}
+
+.promo-header-search__input:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-size: 18px;
+  line-height: 1.1em;
+  color: #FFFFFF;
+}
+
+.promo-header-search button.btn ._icon {
+  display: none;
 }
 
 .home-map {
@@ -6464,11 +6510,12 @@ textarea {
   }
 
   .languages__item:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: #6D71F9;
+    color: #fff;
   }
 
-  .languages__item.active:hover {
-    background-color: #fff;
+  .languages__item:hover:after {
+    border-top: .3em solid #fff;
   }
 
   .popular-brand__slider-btn:hover {
@@ -6537,16 +6584,16 @@ textarea {
     background-color: rgba(109, 113, 249, 0.1);
   }
 
-  .promo-header-search__input:hover {
-    border: 1px solid rgba(255, 255, 255, 0.4);
-  }
-
   .cryptocurrency__item:hover .cryptocurrency__item-hover {
     opacity: 1;
   }
 
   .cryptocurrency__item:hover .cryptocurrency__item-icon {
     background-color: #5CDEDA;
+  }
+
+  .promo-header-search__input:hover {
+    border: 1px solid rgba(255, 255, 255, 0.4);
   }
 
   .category-header__bottom-btn {
@@ -7355,6 +7402,10 @@ textarea {
     top: 135px;
   }
 
+  .cryptocurrency__item-title {
+    font-size: 22px;
+  }
+
   .promo-header__bg {
     display: block;
     z-index: 2;
@@ -7403,10 +7454,6 @@ textarea {
 
   .promo-header-search button.btn {
     min-width: 166px;
-  }
-
-  .cryptocurrency__item-title {
-    font-size: 22px;
   }
 
   .category-header__bg {
@@ -7824,12 +7871,12 @@ textarea {
   }
 
   .languages__item {
-    height: 36px;
-    min-width: 62px;
+    min-width: 62px !important;
   }
 
-  .languages__item.active {
-    min-width: 62px !important;
+  .languages__item {
+    height: 36px;
+    min-width: 62px;
   }
 
   .languages__item:first-child {
@@ -8188,6 +8235,10 @@ textarea {
     padding: 1.5rem;
   }
 
+  .cryptocurrency__item-title {
+    font-size: 20px;
+  }
+
   .promo-header__bg > .promo-header__img {
     bottom: 402px;
     right: 50%;
@@ -8265,10 +8316,6 @@ textarea {
     height: auto;
     width: auto;
     position: static;
-  }
-
-  .cryptocurrency__item-title {
-    font-size: 20px;
   }
 
   .category-header__bg-inner {
@@ -8981,6 +9028,11 @@ textarea {
     font-size: 14px;
   }
 
+  .cryptocurrency__item-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
   .promo-header__bg-inner {
     width: 642px;
   }
@@ -9016,36 +9068,6 @@ textarea {
 
   .promo-header-search button.btn ._icon {
     display: none;
-  }
-
-  .cryptocurrency__list {
-    display: block;
-    margin: 0;
-    padding: 0 15px;
-  }
-
-  .cryptocurrency__item {
-    padding: 0;
-    margin-bottom: 15px;
-    margin-left: 10px;
-  }
-
-  .cryptocurrency__item-inner {
-    padding: 7px 10px 7px 30px;
-    min-height: 60px;
-  }
-
-  .cryptocurrency__item-icon {
-    top: 50%;
-    left: -25px;
-    -webkit-transform: translate(0%, -50%);
-        -ms-transform: translate(0%, -50%);
-            transform: translate(0%, -50%);
-  }
-
-  .cryptocurrency__item-title {
-    font-size: 18px;
-    margin-bottom: 5px;
   }
 
   .category-header__bg-inner {

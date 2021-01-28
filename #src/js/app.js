@@ -54,6 +54,7 @@ $(document).ready(function () {
 	@@include('../common/tabs-block/tabs-block.js');
 	@@include('../common/shares-block/shares-block.js');
 	@@include('../common/popup/popup.js');
+	@@include('../common/cryptocurrency/cryptocurrency.js');
 	
 	
 	@@include('pages/#category-page.js');
