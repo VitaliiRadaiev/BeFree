@@ -33,7 +33,7 @@
 
             @media (max-width: $md2+px) {
                 display: block;
-                bottom: 243px;
+                bottom: 72px;
                 right: -314px;
                 width: 978px;
 
@@ -54,7 +54,8 @@
             }
 
             @media (max-width: $md3+px) {
-                bottom: 402px;
+                bottom: auto;
+                top: 105px;
                 right: 50%;
                 transform: translateX(50%);
                 width: 900px;
@@ -128,16 +129,16 @@
 
     &__img {
         position: absolute;
-        bottom: -68px;
-        right: -514px;
-        width: 1564px;
+        bottom: -17px;
+        right: -346px;
+        width: 1225px;
         z-index: 5;
         & img {
             width: 100%;
         }
 
         @media (max-width: 1199px) {
-            bottom: 177px;
+            bottom: 44px;
             right: -346px;
             width: 1156px;
         }
@@ -322,6 +323,10 @@
         }
     }
 }
+
+
+
+
 
 
 

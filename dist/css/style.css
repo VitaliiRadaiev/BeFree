@@ -4332,7 +4332,7 @@ textarea {
           box-shadow: -14px -12px 24px #6D71F9, 12px 12px 24px #5D60D4;
   border-radius: 5px;
   min-height: 120px;
-  padding: 46px 15px 20px;
+  padding: 46px 5px 20px;
   text-align: center;
 }
 
@@ -4431,7 +4431,7 @@ textarea {
 
 .cryptocurrency__item-title {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.1666em;
   text-align: center;
   text-transform: uppercase;
@@ -4574,9 +4574,9 @@ textarea {
 
 .promo-header__img {
   position: absolute;
-  bottom: -68px;
-  right: -514px;
-  width: 1564px;
+  bottom: -17px;
+  right: -346px;
+  width: 1225px;
   z-index: 5;
 }
 
@@ -6843,7 +6843,7 @@ textarea {
 
 @media (max-width: 1199px) {
   .promo-header__img {
-    bottom: 177px;
+    bottom: 44px;
     right: -346px;
     width: 1156px;
   }
@@ -7413,7 +7413,7 @@ textarea {
 
   .promo-header__bg > .promo-header__img {
     display: block;
-    bottom: 243px;
+    bottom: 72px;
     right: -314px;
     width: 978px;
   }
@@ -8240,7 +8240,8 @@ textarea {
   }
 
   .promo-header__bg > .promo-header__img {
-    bottom: 402px;
+    bottom: auto;
+    top: 105px;
     right: 50%;
     -webkit-transform: translateX(50%);
         -ms-transform: translateX(50%);
