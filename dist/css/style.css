@@ -4844,8 +4844,8 @@ textarea {
 .header-sort {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr minmax(230px, 24%);
-  grid-template-columns: 1fr 1fr minmax(230px, 24%);
+  -ms-grid-columns: minmax(230px, 24%) 1fr minmax(230px, 24%);
+  grid-template-columns: minmax(230px, 24%) 1fr minmax(230px, 24%);
   -webkit-column-gap: 30px;
      -moz-column-gap: 30px;
           column-gap: 30px;
@@ -6273,6 +6273,9 @@ textarea {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .header-sort__radio-wrap .radio-wrap:not(:last-child) {

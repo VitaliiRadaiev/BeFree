@@ -175,7 +175,7 @@
     //     justify-content: space-between;
     // }
     display: grid;
-    grid-template-columns: 1fr 1fr minmax(230px, 24%);
+    grid-template-columns: minmax(230px, 24%) 1fr minmax(230px, 24%);
     column-gap: 30px;
     row-gap: 10px;
 
@@ -190,6 +190,7 @@
 
     &__item {
         position: relative;
+
         @media (max-width: $md3+px) {
             margin-bottom: 20px;
         }
@@ -344,6 +345,7 @@
         @media (min-width: 480px) {
             display: flex;
             align-items: center;
+            justify-content: space-between;
     
             & .radio-wrap {
                 &:not(:last-child) {
