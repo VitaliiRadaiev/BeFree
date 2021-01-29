@@ -175,9 +175,9 @@
     //     justify-content: space-between;
     // }
     display: grid;
-    grid-template-columns: minmax(230px, 24%) 1fr minmax(230px, 24%);
+    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 30px;
-    row-gap: 10px;
+    row-gap: 30px;
 
     @media (max-width: $md2+px) {
         grid-template-columns: 1fr 1fr;
@@ -196,61 +196,28 @@
         }
 
         &:nth-child(1) {
-            order: 1;
-            z-index: 5;
-            @media (max-width: $md2+px) {
-                order: 3;
 
-            }
+            z-index: 5;
         }
         &:nth-child(2) {
-            order: 2;
+
             z-index: 4;
-            @media (min-width: 992px) {
-                grid-column: 1 / 1;
-                grid-row: 2 ;
-            }
-
-            @media (max-width: $md2+px) {
-                order: 5;
-
-            }
             
         }
         &:nth-child(3) {
-            order: 3;
 
-            @media (min-width: 768px) {
-                & .header-sort__title {
-                    margin-bottom: 38px;
-                }
-            }
-
-
-
-            @media (max-width: $md2+px) {
-                order: 1;
-
-            }
+            z-index: 3;
         }
         &:nth-child(4) {
-            order: 5;
+            grid-column: 1/ -1;
+            display: flex;
+            justify-content: center;
 
-            @media (min-width: 768px) {
-                & .header-sort__title {
-                    margin-bottom: 38px;
-                }
-            }
-
-            @media (max-width: $md2+px) {
-                order: 2;
-
+            @media (max-width: $md3+px) {
+                display: block;
             }
         }
-        &:nth-child(5) {
-            order: 4;
 
-        }
 
     }
 
@@ -348,9 +315,7 @@
             justify-content: space-between;
     
             & .radio-wrap {
-                &:not(:last-child) {
-                    margin-right: 20px;
-                }
+                margin-right: 40px;
     
                 & .radio-wrap__label {
                     white-space: nowrap;
