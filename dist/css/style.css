@@ -4852,16 +4852,22 @@ textarea {
   row-gap: 10px;
 }
 
+.header-sort__item {
+  position: relative;
+}
+
 .header-sort__item:nth-child(1) {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+  z-index: 5;
 }
 
 .header-sort__item:nth-child(2) {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+  z-index: 4;
 }
 
 .header-sort__item:nth-child(3) {

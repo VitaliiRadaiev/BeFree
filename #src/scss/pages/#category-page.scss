@@ -189,14 +189,14 @@
     }
 
     &__item {
-
+        position: relative;
         @media (max-width: $md3+px) {
             margin-bottom: 20px;
         }
 
         &:nth-child(1) {
             order: 1;
-
+            z-index: 5;
             @media (max-width: $md2+px) {
                 order: 3;
 
@@ -204,7 +204,7 @@
         }
         &:nth-child(2) {
             order: 2;
-
+            z-index: 4;
             @media (min-width: 992px) {
                 grid-column: 1 / 1;
                 grid-row: 2 ;
