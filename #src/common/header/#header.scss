@@ -361,7 +361,11 @@
 
         @media (min-width: 992px) {
             &:hover {
-                background-color: rgba(#000, 0.05);
+                color: $blue;
+
+                &:before {
+                    width: 90%;
+                }
             }
         }
 
@@ -385,6 +389,7 @@
             width: 0%;
             height: 2px;
             background-color: $blue;
+            transition: all .2s ease;
 
             @media (max-width: 1267px) {
                 bottom: -32px;

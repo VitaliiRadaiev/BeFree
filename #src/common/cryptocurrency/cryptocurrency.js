@@ -1,7 +1,7 @@
 {
     let cryptocurrencySlider = document.querySelector('.cryptocurrency__slider');
     if(cryptocurrencySlider) {
-        let dataSlider = new Swiper(cryptocurrencySlider.querySelector('.swiper-container'), {
+        var cryptoSlider = new Swiper(cryptocurrencySlider.querySelector('.swiper-container'), {
             freeMode: true,
             /*
             effect: 'fade',

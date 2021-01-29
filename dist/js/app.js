@@ -905,7 +905,6 @@ if(priceSlider) {
 
     let localBtn = document.querySelector('.promo-header__local-icon');
     if(localBtn) {
-        console.log(localBtn);
         
         localBtn.addEventListener('click', function() {
             let map = document.querySelector('.home-map'); 
@@ -1513,7 +1512,7 @@ document.addEventListener('keydown', function(e) {
 	{
     let cryptocurrencySlider = document.querySelector('.cryptocurrency__slider');
     if(cryptocurrencySlider) {
-        let dataSlider = new Swiper(cryptocurrencySlider.querySelector('.swiper-container'), {
+        var cryptoSlider = new Swiper(cryptocurrencySlider.querySelector('.swiper-container'), {
             freeMode: true,
             /*
             effect: 'fade',
@@ -1594,6 +1593,7 @@ document.addEventListener('keydown', function(e) {
             let headerSort = document.querySelector('.category-header .category-header__toggle-slide');
             headBottomBtn.classList.toggle('_active');
             _slideToggle(headerSort, 600);
+            cryptoSlider.update();
         })
     }
 

@@ -27,7 +27,6 @@
 
     let localBtn = document.querySelector('.promo-header__local-icon');
     if(localBtn) {
-        console.log(localBtn);
         
         localBtn.addEventListener('click', function() {
             let map = document.querySelector('.home-map'); 

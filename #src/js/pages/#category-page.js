@@ -5,6 +5,7 @@
             let headerSort = document.querySelector('.category-header .category-header__toggle-slide');
             headBottomBtn.classList.toggle('_active');
             _slideToggle(headerSort, 600);
+            cryptoSlider.update();
         })
     }
 
