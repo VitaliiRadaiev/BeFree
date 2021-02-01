@@ -4582,8 +4582,8 @@ textarea {
 
 .promo-header__img {
   position: absolute;
-  bottom: -60px;
-  right: -346px;
+  bottom: 85px;
+  right: -300px;
   width: 1225px;
   z-index: 5;
 }
@@ -6904,8 +6904,8 @@ textarea {
 
 @media (max-width: 1199px) {
   .promo-header__img {
-    bottom: 44px;
-    right: -346px;
+    bottom: 128px;
+    right: -199px;
     width: 1156px;
   }
 }
@@ -7474,8 +7474,8 @@ textarea {
 
   .promo-header__bg > .promo-header__img {
     display: block;
-    bottom: 72px;
-    right: -314px;
+    bottom: 134px;
+    right: -216px;
     width: 978px;
   }
 
@@ -8312,7 +8312,7 @@ textarea {
 
   .promo-header__bg > .promo-header__img {
     bottom: auto;
-    top: 105px;
+    top: -14px;
     right: 50%;
     -webkit-transform: translateX(50%);
         -ms-transform: translateX(50%);
@@ -8330,6 +8330,7 @@ textarea {
 
   .promo-header__title {
     text-align: center;
+    max-width: none;
   }
 
   .promo-header__subtitle {
@@ -8823,7 +8824,7 @@ textarea {
 @media (max-width: 574px) {
   .promo-header__bg > .promo-header__img {
     bottom: auto;
-    top: 100px;
+    top: 0px;
     width: 747px;
   }
 }

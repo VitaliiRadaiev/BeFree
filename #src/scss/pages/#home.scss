@@ -33,8 +33,8 @@
 
             @media (max-width: $md2+px) {
                 display: block;
-                bottom: 72px;
-                right: -314px;
+                bottom: 134px;
+                right: -216px;
                 width: 978px;
 
                 &:before {
@@ -55,7 +55,7 @@
 
             @media (max-width: $md3+px) {
                 bottom: auto;
-                top: 105px;
+                top: -14px;
                 right: 50%;
                 transform: translateX(50%);
                 width: 900px;
@@ -63,7 +63,7 @@
 
             @media (max-width: 574px) {
                bottom: auto;
-               top: 100px;
+               top: 0px;
                width: 747px;
             }
         }
@@ -129,8 +129,8 @@
 
     &__img {
         position: absolute;
-        bottom: -60px;
-        right: -346px;
+        bottom: 85px;
+        right: -300px;
         width: 1225px;
         z-index: 5;
         & img {
@@ -138,8 +138,8 @@
         }
 
         @media (max-width: 1199px) {
-            bottom: 44px;
-            right: -346px;
+            bottom: 128px;
+            right: -199px;
             width: 1156px;
         }
 
@@ -173,6 +173,7 @@
         position: relative;
         @media (max-width: $md3+px) {
             text-align: center;
+            max-width: none;
         }
 
         @media (max-width: $md4+px) {
