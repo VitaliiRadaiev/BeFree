@@ -1,0 +1,85 @@
+.cookie-message {
+    background-color: $blue;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 200;
+    width: 100%;
+    display: none;
+    animation: cookieAnim .4s ease forwards;
+    box-shadow: 0 0 20px rgba(#fff, 0.5);
+
+    @keyframes cookieAnim {
+        from {
+            transform: translateY(102%);
+        }
+        to {
+            transform: translateY(0%);
+        }
+    }
+
+    &__body {
+        max-width: 160rem;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+        color: #fff;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    &__text {
+        margin-right: 30px;
+
+        & > a {
+            color: #fff;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__close {
+        padding: 5px;
+        background-color: transparent;
+        transition: all .2s ease;
+
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: rgba(#fff, 0.1);
+            }
+        }
+
+        & > span {
+            display: block;
+            height: 16px;
+            width: 16px;
+            position: relative;
+            transform: rotate(45deg);
+
+            &:before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 50%;
+                height: 100%;
+                width: 3px;
+                transform: translateX(-50%);
+                background-color: #fff;
+            }
+            &:after {
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 0%;
+                height: 3px;
+                width: 100%;
+                transform: translateY(-50%);
+                background-color: #fff;
+            }
+        }
+    }
+}
