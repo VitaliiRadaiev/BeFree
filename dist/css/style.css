@@ -4294,10 +4294,26 @@ textarea {
 
 .popup-form button.btn {
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .popup-form button.btn + a {
   margin-top: 20px;
+}
+
+.popup-form .checkbox-wrap label,
+.popup-form .checkbox-wrap .checkbox-wrap__label {
+  font-size: 18px;
+  line-height: 1.555em;
+  text-align: left;
+  color: #2A2929;
+}
+
+.popup-form .checkbox-wrap label:before,
+.popup-form .checkbox-wrap .checkbox-wrap__label:before {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #2FFF6A;
 }
 
 .cryptocurrency__slider {

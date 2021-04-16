@@ -306,9 +306,25 @@
 
 	& button.btn {
 		width: 100%;
+		margin-bottom: 10px;
 		
 		& + a {
 			margin-top: 20px;
 		}
+	}
+
+	& .checkbox-wrap {
+
+		& label, & .checkbox-wrap__label {
+			font-size: 18px;
+			line-height: 1.555em;
+			text-align: left;
+			color: $textColor;
+
+			&:before {
+				box-shadow: none;
+				background-color: #2FFF6A;
+			}
+		}	
 	}
 }
