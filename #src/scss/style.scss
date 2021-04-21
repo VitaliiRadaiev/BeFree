@@ -336,7 +336,6 @@ textarea {
 	font-weight: 500;
 	font-size: 70px;
 	line-height: 1.143em;
-	color: #FFFFFF;
 
 	@media (max-width: $md2+px) {
 		font-size: 40px;
@@ -352,7 +351,6 @@ textarea {
 	font-weight: 500;
 	font-size: 50px;
 	line-height: 1.18em;
-	color: $textColor;
 
 	@media (max-width: $md2+px) {
 		font-size: 40px;
@@ -377,13 +375,11 @@ textarea {
 	font-weight: 500;
 	font-size: 24px;
 	line-height: 1.416em;
-	color: $textColor;
 }
 .title-6 {
 	font-weight: 500;
 	font-size: 18px;
 	line-height: 1.555em;
-	color: $textColor;
 
 }
 
@@ -517,6 +513,14 @@ button.btn-default {
 }
 
 // === and btn ========================================================================
+.form-item {
+	margin-bottom: 20px;
+	position: relative;
+
+	@media (max-width: $md4+px) {
+		margin-bottom: 15px;
+	}
+}
 
 .input {
 
@@ -859,6 +863,10 @@ button.btn-default {
 	
 	// ==== PAGE 404 =====================================================
 	@import "pages/#page-404";
+	// ==== AND PAGE 404 =====================================================
+	
+	// ==== AND PAGE 404 =====================================================
+	@import "pages/#coming-soon";
 	// ==== AND PAGE 404 =====================================================
 	
 // ==== AND PAGES =====================================================
